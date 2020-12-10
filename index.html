@@ -206,7 +206,32 @@
             </nav>
           </div>
           <div class="columnas col-12 col-md-9 col-lg-6 ">
-            <header class="d-flex  d-md-none items-center justify-content-center mobile">
+            <header class="principal_header d-none d-md-flex align-items-center justify-content-between">
+              <h4 class="post-title"><a href="post.html">Posts</a></h4>
+              <ul class="nav nav-pills lg-3" id="pills-tab" role="tablist">
+                  <li class="nav-item">
+                      <a class="nav-link" id="pills-feed-tab" data-toggle="pill" href="#pills-feed" role="tab" aria-controls="pills-feed" aria-selected="true">Feed</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="pills-week-tab" data-toggle="pill" href="#pills-week" role="tab" aria-controls="pills-week" aria-selected="false">Week</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="pills-month-tab" data-toggle="pill" href="#pills-month" role="tab" aria-controls="pills-month" aria-selected="false">Month</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="pills-year-tab" data-toggle="pill" href="#pills-year" role="tab" aria-controls="pills-year" aria-selected="true">Year</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="pills-infinity-tab" data-toggle="pill" href="#pills-infinity" role="tab" aria-controls="pills-infinity" aria-selected="false">Infinity</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="pills-latest-tab" data-toggle="pill" href="#pills-latest" role="tab" aria-controls="pills-latest" aria-selected="false">Latest</a>
+                  </li>
+              </ul>
+              <a href="#" class="rayo d-none d-md-flex d-lg-none" onclick="on()"><img src="images/icon_nav/rayo_nav.svg" alt=""></a>
+            </header>
+            
+            <header class="d-flex d-md-none items-center justify-content-center mobile">
               <a href="#" onclick="on()"><img src="images/icon_nav/icon_first_aside.svg" alt=""></a>
               <div class="col-8 d-flex flex-nowrap justify-content-between align-items-center">
                 <h5 class="post-title">Posts</h5>
@@ -501,7 +526,7 @@
                 </div>
               </div>
 
-              <div class="tab-pane fade active" id="pills-week" role="tabpanel" aria-labelledby="pills-week-tab">
+              <div class="tab-pane" id="pills-week" role="tabpanel" aria-labelledby="pills-week-tab">
                 <div class="card ">
                   <img class="card-img-top" src="./images/articles/week.png" alt="Card image cap">
                   <div class="card-body">
@@ -663,7 +688,7 @@
                 </div>
               </div>
 
-              <div class="tab-pane fade active" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
+              <div class="tab-pane" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
                 <div class="card ">
                   <img class="card-img-top" src="./images/articles/month.png" alt="Card image cap">
                   <div class="card-body">
@@ -867,7 +892,7 @@
                 </div>
               </div>
 
-              <div class="tab-pane fade active" id="pills-year" role="tabpanel" aria-labelledby="pills-year-tab">
+              <div class="tab-pane" id="pills-year" role="tabpanel" aria-labelledby="pills-year-tab">
                 <div class="card ">
                   <img class="card-img-top" src="./images/articles/year.jpg" alt="Card image cap">
                   <div class="card-body">
@@ -1071,7 +1096,7 @@
                 </div>
               </div>
 
-              <div class="tab-pane fade active" id="pills-infinity" role="tabpanel"
+              <div class="tab-pane" id="pills-infinity" role="tabpanel"
                 aria-labelledby="pills-infinity-tab">
                 <div class="card ">
                   <img class="card-img-top" src="./images/articles/infinity.jpeg" alt="Card image cap">
@@ -1235,7 +1260,7 @@
                 </div>
               </div>
 
-              <div class="tab-pane fade active" id="pills-latest" role="tabpanel" aria-labelledby="pills-latest-tab">
+              <div class="tab-pane" id="pills-latest" role="tabpanel" aria-labelledby="pills-latest-tab">
                 <div class="card ">
                   <img class="card-img-top" src="./images/articles/latest.jpg" alt="Card image cap">
                   <div class="card-body">
