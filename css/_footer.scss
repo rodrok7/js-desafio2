@@ -1,0 +1,185 @@
+.img-logo{
+  height: 40px;
+  width: 50px;
+  margin-right: 10px;
+  text-decoration: none;
+  border-color: transparent;
+  border-radius: 4px;
+    &:active{
+      text-decoration: none;
+      border-color: transparent;
+    }
+}
+
+.img-smill{
+  height: 32px;
+  width: 32px;
+  margin-left: 8px;
+  opacity: .7;
+}
+
+.img-bell{
+  height: 32px;
+  width: 32px;
+  margin-left: 15px;
+  opacity: .7;
+}
+
+.img-avatar{
+  height: 32px;
+  width: 32px;
+  margin-left: 15px;
+  position: relative;
+
+  &:hover + .menu-avatar{
+    display: block;
+  }
+
+}
+.menu-avatar{
+  position: absolute;
+  display: none;
+  transition: all 0.10s ease-in-out;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+li{
+  text-decoration: none;
+  list-style: none;
+}
+
+
+
+.form-control{
+  margin-top: 7px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.btn-primary{
+  background-color: $color-button;
+  margin-top: 7px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+
+#footer{
+  background: $color-button-base;
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding-top:48px;
+  padding-bottom: 48px;
+  position: relative;
+  font-size: 16px;
+  
+  
+  p{
+    font-size: 12px;
+    color: hsl(0, 0%, 26%);
+  }
+
+  .col-3{
+    display: flex;
+    display: inline-block;
+
+  }
+
+  .reds{
+    margin-bottom: 15px;
+    margin-right: 20px;
+  }
+
+  .red-icon{
+    height: 22px;
+    width: 22px;
+    opacity: 0.5;
+  }
+  .info-redes{
+    margin-right: 20px;
+    line-height: 25px;
+    box-sizing: border-box;
+  }
+  
+
+  .container-a1{
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size:14px;
+    padding-left: 40px;
+     
+  }
+
+  .container-a2{
+    margin-left: 15px;
+    margin-top: 20px;
+    padding-left: 40px;
+    font-size: 14px;
+    color: hsl(0, 0%, 26%); 
+  }
+
+  .container-a3{
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-left: 40px;
+    font-size: 14px;
+    
+  }
+
+  .a-f{
+    color: hsl(0, 0%, 26%);
+    padding-bottom: 15px;
+    padding-top: 8px;
+    padding-left: 5px;
+    font-size: 1em;
+    text-align: left;
+  }
+
+  .a-f:hover{
+    background: hsl(184, 6%, 72%);
+    border-radius: 5px;
+    color: navy;
+    text-decoration:none;
+  } 
+
+  .perezoso{
+    height: 130px;
+    // width: 52px;
+    position: absolute;
+    top: -3px;
+    right: 1em;
+    transform-origin: center top;
+ 
+        &:hover{
+          transform:rotate(-4deg); 
+          transition-duration: .5s;
+        }
+  }
+
+}
+.fixed-top{
+  height: 66px;
+  background-color: white;
+  align-items: self-end;
+  padding: 10px;
+}
+.dropdown-item{
+  background-color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+.dropdown-item{
+  width: 150px;
+
+}
+.top-nav{
+ box-shadow: rgba(0, 0, 0, .1) ;
+}
+
+#footer p.info_community{
+  margin-right: 4px;
+  font-size: 12px;
+  margin-top: 1em;
+}
