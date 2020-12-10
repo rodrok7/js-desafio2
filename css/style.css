@@ -956,4 +956,28 @@ select {
     font-size: smaller;
   }
 }
+
+body {
+  position: relative;
+  background-color: #eef0f1;
+  padding-top: 75px;
+}
+
+.footer-write-post {
+  margin-left: 20%;
+}
+
+.choose-file-btn {
+  content: 'Add cover image';
+  background-color: red;
+}
+
+.title-placeholder {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.main-write-post {
+  margin-left: 20%;
+}
 /*# sourceMappingURL=style.css.map */
