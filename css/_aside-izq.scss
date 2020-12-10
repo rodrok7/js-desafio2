@@ -1,0 +1,92 @@
+.navegation-icon {
+    font-size: 2px;
+    color: dodgerblue;
+}
+.car_aside{
+    background-color:#eef0f1;
+    border: none;
+}
+.userInfo{
+    .profile_content{
+        &:hover{
+            background-color: $color-button-hover-aside_izq;
+            border-radius: 5px;
+        }
+    }
+    
+}
+.aside-izq{
+    height: 50%;
+    line-height: 1.5em;
+    a.list-aside{
+        padding: 8px;
+        display: inline-block;
+        &:hover{
+            background-color: $color-button-hover-aside_izq;
+            border-radius: 5px;
+        }
+        .dataCount{
+            background-color: $color-button-hover-aside_izq;
+            border-radius: 5px;
+            padding: 8px;
+            font-size: .75rem;
+            margin-left: auto;
+            display: inline-block;
+        }
+    }
+}
+.profile_thumbnail{
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+}
+.profile_name{
+    display: inline;
+    font-weight: bolder;
+    color: $color-black;
+}
+.profile_email{
+    color: $color-black;
+    opacity: .75;
+}
+.profile_content{
+    padding: 8px;
+    margin-bottom: 8px;
+}
+.rainbowdev{
+    width: 20px;
+}
+.icon-list a{
+    color: $color-black;
+    line-height: 1.5em;
+}
+.btn-link {
+    
+    &.more_button{
+        color: $color-black;
+        text-decoration: none;
+        box-shadow: none;
+        opacity: .5;
+        font-size: small;
+        padding-left: 40px;
+        // &:active{
+        //     visibility: hidden;
+        // }
+    }
+}
+
+#collapseOne{
+    height: 50%;
+    line-height: 1.5em;
+    .icon_collapse .redes-nav .red-icon{
+        width: 30px;
+        padding-left: 8px;
+        opacity: .5;
+    }
+    a{
+        padding: 8px;
+        color: $color-black;
+    }
+    
+}
+
