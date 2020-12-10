@@ -7,7 +7,11 @@
         "_variables.scss",
         "_mixins.scss",
         "_header.scss",
-        "_aside-der.scss"
+        "_aside-der.scss",
+        "_aside-izq.scss",
+        "_footer.scss",
+        "_nav.scss",
+        "_main-post.scss"
     ],
     "names": [],
     "file": "style.css"
