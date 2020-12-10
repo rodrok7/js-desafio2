@@ -621,7 +621,7 @@ a:hover {
 .nav-pills .nav-link {
   font-family: "Source Sans Pro", sans-serif;
   color: #363d44;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 3px;
 }
 
@@ -668,7 +668,7 @@ select {
 }
 
 .tab-content .tab-pane .card {
-  margin-bottom: .25rem;
+  margin-bottom: .50rem;
   border-radius: 5px;
 }
 
