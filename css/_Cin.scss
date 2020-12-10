@@ -1,0 +1,377 @@
+body {
+    position: relative;
+    background-color:$color-body;
+    padding-top: 75px;
+  }
+.principal_header{
+      margin: 5px auto;
+}
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+#text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 50px;
+    color: white;
+    /*transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);*/
+    background-color:#ffffff;
+    transition-timing-function:ease-out;
+    transition:2s;
+    transform:translateX(0);
+    
+}
+.mobile{
+      .rayo{
+        vertical-align: middle;
+        img{
+            
+            width: 30px;
+            display: inline-block;
+        }
+      }
+      
+}
+  a{
+      text-decoration: none;
+      cursor: pointer;
+  }
+  a:hover{
+      text-decoration: none;
+  }
+.nav{
+    flex-wrap: nowrap; 
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.nav-pills .nav-link{
+    font-family: $font-family;
+    color: $color-basea90;
+    font-size: 20px;
+    border-radius: 3px;
+}
+.nav-pills .nav-link.active{
+    border-bottom: 4px  solid $color-button;
+    background: none;
+    color: $color-black;
+    box-sizing: border-box;
+}
+.nav-pills .nav-link:hover{
+    text-decoration: none;
+    color: $color-button;
+    background-color: $backgrand-color-nav;
+}
+.nav-pills .nav-link:focus{
+    text-decoration: none;
+}
+
+.nav-link{
+    padding: 8px;
+    margin:0 4px ;
+}
+.post-title{
+    font-weight: bolder;
+
+}
+.post-title a{
+    color: $color-black;
+    text-decoration: none;
+}
+
+nav a:focus{
+    border-bottom: 4px  solid $color-button;
+}
+select{
+    padding: 10px 15px;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+}
+.tab-content{
+    .tab-pane{
+        .card{
+            margin-bottom: .25rem;
+            border-radius: 5px;
+            .card-img-top{
+                max-height: 268px;
+                object-fit: cover;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+            .card-body{
+                    .profile_min{
+                        width: 53px;
+                        border-radius: 50%;
+                        height: 53px;
+                        border: 1px solid $color-terciary;
+                    }
+                    div.info_personal{
+                        vertical-align: middle;
+                    }
+                    span.name a{
+                        color: $color-secundary;
+                        font-weight: 500;
+                        font-size: 16px;
+
+                        &:hover{
+                            color: $color-black;
+                        }
+                    }
+                    span.date a{
+                        font-size: 14px;
+                        color: $color-terciary;
+                        &:hover{
+                            color: $color-black;
+                        }
+                    }
+                    .content-center{
+                        margin-left: 40px;
+                            
+                        .card-title a{
+                            color: $color-black;
+                            font-weight: bolder;
+                            &:hover{
+                                color: $color-link-hover;
+                            }
+                        }
+                       
+                    }
+                    .hashtags{
+                        margin-bottom: 8px;
+                        & a{
+                            color: $color-terciary;
+                            font-size: 16px;  
+                            padding: 4px;
+                            margin-top: 8px;
+                            &:nth-child(1){
+                                background: rgb(255, 237, 201);
+                                color: rgb(130, 0, 0);
+                                border-radius: 5px;
+                            }
+                            &:hover{
+                                color: $color-black;
+                            }
+                            & .crayon{
+                                opacity: 0.4;
+                            }
+                        }
+                    }
+                    .card-b-content{
+                        .icon-right{
+                            & a{
+                                color: $color-link-var;
+                                padding: 4px 12px 4px 8px;
+                                border-radius: 5px;
+                                &:hover{
+                                    background-color: $color-hover-left;
+                                }
+                            }
+                            
+                        }
+                        .icon-left{
+                            .timer {  
+                                margin-right: 8px;
+                            } 
+                            .btn-less-light{
+                                background-color: $color-button-base;
+                                padding: 6px 14px;
+                                &:hover{
+                                    background-color: $color-button-hover;
+                                } 
+                                &:focus{
+                                    background-color: transparent;
+                                    border: none;
+                                }
+                            }   
+                        }
+                    }
+                
+            }
+        }
+    }
+}
+/*Comienza el CSS del Post*/
+.posts{
+    font-size: x-large;
+}
+.code{
+    background-color: $color-black;
+    border: 1px solid white;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    pre code{
+        color:white;
+        text-align: justify;
+        text-decoration: none;
+    }
+
+}
+.prueba_code{
+    border: 2px solid black;
+    font-size: 12px;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+}
+.codePen{
+    margin: 0 auto;
+    border-radius: 15px;
+    width: 70%;
+}
+#textarea_small{
+    margin: 0;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.3);
+    color: rgba(0,0,0,0.3);
+}
+.btn-light{
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 0 20px;
+    border-radius: 15px;
+
+}
+.comment-section{
+    margin: 20px 0;
+}
+.display-button{
+    background-color: white;
+    color: black;
+    border: none;
+    &:hover{
+        background-color: $color-button-base;
+
+    }
+}
+.git_icon img{
+    width: 30px !important;
+    border: none !important;
+}
+.mini_button button{
+    background-color: white;
+}
+.drop_square{
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10 5 rgba(0,0,0,0.5);
+}
+.profile_max{
+    width: 100px;
+    border-radius: 50%;
+    height: 100px;
+    border: 1px solid $color-terciary;
+    object-fit: cover;
+}
+.tab-content{
+    .tab-pane {
+        .card {
+            &.add_articles{
+                padding-left: 20px;
+                .card-body{
+                    .info_personal_big{
+                        margin: 15px;
+                        font-size: 1.5rem;
+                        & .title_article{
+                            color: $color-black;
+                            font-weight: bolder;
+                            &:hover{
+                                color: $color-title-darker;
+                            }
+                        }
+                    }        
+                    .mini_info{
+                        .name_big{
+                            font-size:18px;
+                        }
+                        .date_big{
+                            font-size:18px;
+                        }
+            }    }   }    
+        }
+    }
+    
+} 
+.card{
+    &.info_prof{
+        .card-body{
+            .personal_name a{
+                font-weight: bolder;
+                color: black;
+                font-size: xx-large;
+
+            }
+            .info_personal p{
+                font-size: 1.5rem;
+            }
+            .content-center{
+                .button_bigger{
+                    height: 60px;
+                    border-radius: 10px;
+                    background-color: $color-title-darker;
+                    font-size: 1.5rem;
+                    &:hover{
+                        background-color:$color-link-hover;
+                    }
+                }
+            }
+            .profile_info p:nth-of-type(odd){
+                color: $color-terciary;
+                font-weight: bolder;
+            }
+            p>a{
+                cursor: none;
+            }
+        }
+    }
+}
+/*Termina el CSS del Post*/
+@media screen and (max-width:768px){
+    .container{
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+    }
+    .tab-content .tab-pane .card{
+        margin-bottom: 0px;
+        border-radius: 0px;
+        border-top: 0px;
+        & .card-body .content-center{
+            margin-left: 5px;
+            &>h1{
+                font-size: 1.5rem;
+            }
+            .card-b-content{
+                .icon-right a>span{
+                    display: none;
+                }
+                .icon-left a>span{
+                    display: none;
+                }
+            }
+        }
+    }
+    .nav-link{
+        padding: 4px;
+        margin:0 2px ;
+        font-size: 16px;
+    }
+    .card-body{
+        font-size: smaller;
+    }
+}
