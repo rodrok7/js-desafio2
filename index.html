@@ -15,9 +15,42 @@
 <body>
 
 
-
     <!-- Este es el elemento fixed (header) -->
-
+    <nav class="navbar fixed-top navbar-light bg-light shadow-sm p-1 mb-5 bg-white rounded">
+        <div class="container nav-top">
+            <a class="navbar-brand" href="#">
+                <i class="pl-1 fab fa-dev" title="dev"></i>
+            </a>
+            <form class="form-inline flex-grow-1 mr-1 mr-lg-5">
+                <input type="hidden" name="utf8" id="" placeholder="" autocomplete="" value="✓">
+                <input class="form-control w-100" type="search" placeholder="Search..." aria-label="Search">
+            </form>
+            <button type="button"
+                class="btn btn-primary shadow-none font-weight-bold mx-2 text-nowrap d-none d-md-block ml-lg-5">Write a
+                post</button>
+            <a class="navbar-brand rounded-circle top-icons p-1 d-flex align-items-center" href="#">
+                <img src="/images/nav/post-icon.png" class="rounded-circle" alt="Connect" loading="lazy">
+            </a>
+            <a class="navbar-brand rounded-circle top-icons p-1 d-flex align-items-center" href="#">
+                <img src="/images/nav/notification-icon.png" class="rounded-circle" alt="Notifications" loading="lazy">
+            </a>
+            <div class="navbar-brand rounded-circle top-icons p-1 d-flex align-items-center dropdown">
+                <img src="/images/nav/perfil-icon.png" class="rounded-circle" alt="Perfil" loading="lazy">
+                <div class="dropdown">
+                    <img src="/resources/aside1/profile.PNG " alt="" height="30" width="30" class="rounded-circle ml-3">
+                    <div class="dropdown-content rounded border border-dark">
+                        <a href="#">NajeraDev <br> @najeradev</a>
+                        <a href="#">Dashboard</a>
+                        <a href="#">Write a Post</a>
+                        <a href="#">Reading list</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Key Links</a>
+                        <a href="#">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
    
 
      

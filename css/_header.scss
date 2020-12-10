@@ -1,100 +1,70 @@
 .card-profiles {
-  padding: 2rem;
-  border: 1px solid lightgrey;
-  margin-bottom: 10px;
-  border-radius: 6px;
+    padding: 2rem;
+    border: 1px solid lightgrey;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    .profiles {
+        display: flex;
+        margin-top: 1rem;
+        span {
+            color: gray;
+        }
+        p {
+          color: lightgray;
+        }     
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+    }
 }
-
-.card-profiles .profiles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 1rem;
-}
-
-.card-profiles .profiles span {
-  color: gray;
-}
-
-.card-profiles .profiles p {
-  color: lightgray;
-}
-
-.card-profiles .profiles img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 1rem;
-}
-
 .hashtag {
-  color: lightgrey;
+    color: lightgrey;
 }
-
 .titulo-hashtag {
-  color: gray;
-  margin-right: 5px;
+    color: gray;
+    margin-right: 5px;
 }
-
 .titulo-hashtag:hover {
-  color: black;
+    color: black;
 }
-
 .p-profiles h2:hover {
-  color: blue;
+    color: blue;
 }
-
 .card-reacciones {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: flex;
 }
-
 .initial-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  color: lightgray;
+    display: flex;
+    justify-content: flex-start;    
+    color: lightgray;
+    .small {
+        margin-right: 4px;
+    }
 }
-
-.initial-card .small {
-  margin-right: 4px;
-}
-
 .final-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 150px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  color: lightgray;
+    display: flex;
+    margin-left: 150px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: lightgray;
+    .small {
+        margin-right: 4px;
+    }
 }
-
-.final-card .small {
-  margin-right: 4px;
-}
-
 .tiempo-leido {
-  color: lightgray;
+    color: lightgray;
 }
-
 .profiles p:hover {
-  color: black;
+    color: black;
 }
-
 .profiles span:hover {
-  color: black;
+    color: black;
 }
 
-/* <!--Nav y Footer-->
+ /* <!--Nav y Footer-->
 .nav-top{
     position: relative;
     .fa-dev{
@@ -160,4 +130,3 @@
     }
 }
 */
-/*# sourceMappingURL=style.css.map */
