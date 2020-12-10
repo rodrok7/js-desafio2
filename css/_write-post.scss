@@ -1,0 +1,23 @@
+body {
+    position: relative;
+    background-color:$color-body;
+    padding-top: 75px;
+  }
+
+  .footer-write-post {
+      margin-left: 20%;
+  }
+
+  .choose-file-btn {
+      content: 'Add cover image';
+      background-color: red;
+  }
+.title-placeholder {
+    font-size: 50px;
+    font-weight: bold
+}
+
+.main-write-post {
+    margin-left: 20%;
+}
+

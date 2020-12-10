@@ -256,100 +256,73 @@
   margin-left: auto;
 }
 
-.navegation-icon {
-  font-size: 2px;
-  color: dodgerblue;
+#aside-izquierdo .profile {
+  height: 60px;
+  border-radius: 50%;
 }
 
-.car_aside {
-  background-color: #eef0f1;
-  border: none;
+#aside-izquierdo .my-tags-list {
+  height: 270px;
+  overflow: scroll;
+  width: 240px;
+  overflow-x: hidden;
 }
 
-.userInfo .profile_content:hover {
-  background-color: rgba(8, 9, 10, 0.05);
-  border-radius: 5px;
-}
-
-.aside-izq {
-  /* height: 50%; */
-  line-height: 1.5em;
-}
-
-.aside-izq a.list-aside {
-  padding: 8px;
-  display: inline-block;
-}
-
-.aside-izq a.list-aside:hover {
-  background-color: rgba(8, 9, 10, 0.05);
-  border-radius: 5px;
-}
-
-.aside-izq a.list-aside .dataCount {
-  background-color: rgba(8, 9, 10, 0.05);
-  border-radius: 5px;
-  padding: 8px;
-  font-size: .75rem;
-  margin-left: auto;
-  display: inline-block;
-}
-
-.profile_thumbnail {
-  width: 48px;
-  height: 48px;
-  margin-right: 8px;
-}
-
-.profile_name {
-  display: inline;
-  font-weight: bolder;
-  color: #08090a;
-}
-
-.profile_email {
-  color: #08090a;
-  opacity: .75;
-}
-
-.profile_content {
-  padding: 8px;
-  margin-bottom: 8px;
-}
-
-.rainbowdev {
-  width: 20px;
-}
-
-.icon-list a {
-  color: #08090a;
-  line-height: 1.5em;
-}
-
-.btn-link.more_button {
-  color: #08090a;
+#aside-izquierdo .aside1 a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 10px;
+  color: black;
   text-decoration: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  opacity: .5;
-  font-size: small;
-  padding-left: 40px;
 }
 
-#collapseOne {
-  height: 50%;
-  line-height: 1.5em;
+#aside-izquierdo .merch-text {
+  color: blue;
 }
 
-#collapseOne .icon_collapse .redes-nav .red-icon {
-  width: 30px;
-  padding-left: 8px;
-  opacity: .5;
+#aside-izquierdo li {
+  text-decoration: none;
+  color: black;
 }
 
-#collapseOne a {
-  padding: 8px;
-  color: #08090a;
+#aside-izquierdo img:hover {
+  color: blue;
+  pointer-events: visible;
+}
+
+#aside-izquierdo .merch {
+  max-width: 240px !important;
+  border-radius: 15px;
+}
+
+#aside-izquierdo a {
+  color: black;
+}
+
+#aside-izquierdo a:hover {
+  color: black;
+  text-decoration: none;
+  background-color: #d2d6db;
+}
+
+#aside-izquierdo details a:hover {
+  background-color: #d2d6db;
+}
+
+#aside-izquierdo .rainbowdev {
+  height: 25px;
+}
+
+#aside-izquierdo .list-aside {
+  margin-bottom: 2vh;
 }
 
 .img-logo {
@@ -1024,5 +997,29 @@ select {
   .card-body {
     font-size: smaller;
   }
+}
+
+body {
+  position: relative;
+  background-color: #eef0f1;
+  padding-top: 75px;
+}
+
+.footer-write-post {
+  margin-left: 20%;
+}
+
+.choose-file-btn {
+  content: 'Add cover image';
+  background-color: red;
+}
+
+.title-placeholder {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.main-write-post {
+  margin-left: 20%;
 }
 /*# sourceMappingURL=style.css.map */
