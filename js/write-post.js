@@ -6,7 +6,7 @@ $('.image-add-button').click( ()=> {
 })
 let cardsCollections = {};
 let newPostObject = {
-                    "date": "20201210",
+                    "date": moment().substract(30,"days").format("YYYY-MM-DD HH:mm:ss"),
                     "name": "JuanPa",
                     "lastName": "Sánchez" 
                     }
@@ -49,7 +49,7 @@ const printCards = cardsToPrint => {
                                 <img class="profile_min" src="images/aside1/prision-mike.png" alt="">
                                 <div class="info_personal d-inline-block flex-column">
                                     <span class="card-text d-block name"><a class="">${name} ${lastName}</a></span>
-                                    <span class="card-text d-block date"><a class="">${moment(date, "YYYYMMDD").fromNow()}</a></span>
+                                    <span class="card-text d-block date"><a class="">${moment(date, "YYYY-MM-DD HH:mm:ss").fromNow()}</a></span>
                                 </div>
 
                                 <div class="content-center">
@@ -105,7 +105,7 @@ const savePost = newPost => {
 $("#savePost").click( () =>{
         savePost(newPostObject)
         window.location.href = "index.html";
-        getCards();
+        //getCards();
  })
 
 
