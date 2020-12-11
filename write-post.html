@@ -31,7 +31,10 @@
                                 <button class="btn btn-outline-secondary border-0" type="button" id="button-addon1">Preview</button>
                             </div>
                             <div>
-                                <button class="btn btn-outline-secondary border-0" type="button" id="button-addon1">X</button>
+                                <a href="index.html">
+                                    <button class="btn btn-outline-secondary border-0" type="button" id="button-addon1">X</button>
+                                </a>
+                                
                             </div>
                         </div>
 
@@ -42,17 +45,17 @@
                             <form>
                                 <div class="form-group">
                                     <button type="button" class="btn btn-light p-2 image-add-button">Agrega una imagen de cover</button>
-                                    <input class="form-control form-control-lg border-0 d-none input-add-image" type="text" placeholder="Escribe la url de tu foto...">
+                                    <input class="form-control form-control-lg border-0 d-none input-add-image" name="picUrl" type="text" placeholder="Escribe la url de tu foto...">
             
                                 </div>                             
                                 <div class="form-group" id="postForm">
-                                    <input class="form-control form-control-lg border-0 title-placeholder" type="text" placeholder="New post title here...">
+                                    <input class="form-control form-control-lg border-0 title-placeholder" name="title" type="text" placeholder="New post title here...">
                                 </div>
                                 <div class="form-group">
-                                  <input type="text" class="form-control border-0" autocomplete="off" id="newTagPosts" placeholder="Add up to 4 tags...">
+                                  <input type="text" class="form-control border-0" autocomplete="off" id="newTagPosts" name="tags" placeholder="Add up to 4 tags...">
                                 </div>
                                 <div class="form-group">
-                                  <textarea type="textarea" class="form-control border-0" id="inputWritePost" rows="10" placeholder="Write your post content here..."></textarea>
+                                  <textarea type="textarea" class="form-control border-0" id="inputWritePost" name="text" rows="10" placeholder="Write your post content here..."></textarea>
                                 </div>
                               </form>
                      
@@ -64,7 +67,7 @@
                     <div class="col">
                         <div class="py-3 d-flex align-items-center footer-write-post">
                            
-                            <button type="button" class="btn btn-primary border-0">Publish</button>
+                            <button type="button" id="savePost" class="btn btn-primary border-0">Publish</button>
                             <button type="button" class="btn btn-primary bg-dark border-0 ml-2">Save draft</button>
                             <div class="ml-4">
                                 <img src="images/icon_nav/cog.svg" alt="">
