@@ -1,3 +1,87 @@
+.header-fluid {
+  background-color: white;
+}
+
+.profile1 {
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search-bar {
+  position: absolute;
+  width: 20%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #b5bdc4;
+}
+
+.top-header {
+  max-height: 60px;
+  background-color: white;
+}
+
+.logo {
+  height: 30px;
+}
+
+.btn {
+  background-color: #4150f5;
+  color: white;
+}
+
+.dropbtn {
+  height: 30px;
+  color: white;
+  padding: 0px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  -webkit-box-shadow: 10px 10px 0px 0px black;
+          box-shadow: 10px 10px 0px 0px black;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 1px solid black;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.right {
+  position: relative;
+}
+
+.emmanuel-pic {
+  position: absolute;
+  height: 30px;
+  border-radius: 50%;
+  right: 3px;
+  top: 3px;
+  z-index: 1;
+}
+
 #aside-izquierdo .profile {
   height: 60px;
   border-radius: 50%;
@@ -65,106 +149,6 @@
 
 #aside-izquierdo .list-aside {
   margin-bottom: 2vh;
-}
-
-.card-profiles {
-  padding: 2rem;
-  border: 1px solid lightgrey;
-  margin-bottom: 10px;
-  border-radius: 6px;
-}
-
-.card-profiles .profiles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 1rem;
-}
-
-.card-profiles .profiles span {
-  color: gray;
-}
-
-.card-profiles .profiles p {
-  color: lightgray;
-}
-
-.card-profiles .profiles img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 1rem;
-}
-
-.hashtag {
-  color: lightgrey;
-}
-
-.titulo-hashtag {
-  color: gray;
-  margin-right: 5px;
-}
-
-.titulo-hashtag:hover {
-  color: black;
-}
-
-.p-profiles h2:hover {
-  color: blue;
-}
-
-.card-reacciones {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.initial-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  color: lightgray;
-}
-
-.initial-card .small {
-  margin-right: 4px;
-}
-
-.final-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 150px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  color: lightgray;
-}
-
-.final-card .small {
-  margin-right: 4px;
-}
-
-.tiempo-leido {
-  color: lightgray;
-}
-
-.profiles p:hover {
-  color: black;
-}
-
-.profiles span:hover {
-  color: black;
-}
-
-.new-post-link {
-  text-decoration: none;
 }
 
 .aside-derecho .list-group-news {
