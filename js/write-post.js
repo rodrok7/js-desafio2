@@ -105,24 +105,23 @@ const savePost = newPost => {
 }
 
 const addToCardListener = () => {
-    $('#pills-feed .card').click(event => {
-        console.log(event.target)
+    $('.listener-class .card').click(event => {
+        $("#myModal").modal("show")
         let cardKey = $(event.target).closest(".card").data("card-key")
-        let selectedCard = cardsCollections[cardkey]
+        let selectedCard = cardsCollections[cardKey]
 
-        
         let {picUrl, title, tags, name, lastName, text, date} = selectedCard
         $("#myTopImg").attr("src", picUrl );
         $("#nombreDeUsuario").text(name + " " + lastName)
         $("#fechaDelPost").text(moment(date, "YYYY-MM-DD HH:mm:ss").fromNow())
         $("#misHashTags").empty()
-        selectedCard[tags].forEach((item, index) =>{
-            $("#misHashTags").append(`<a href=""><span class="crayon">${item[index]}</span>beginners</a>`)
-        })
+        // selectedCard[tags].forEach((item, index) =>{
+        //     $("#misHashTags").append(`<a href=""><span class="crayon">${item[index]}</span>beginners</a>`)
+        // })
         $("#mytitlePage").text(title)
         $("#myText").text(text)
-        
-        window.location.href = "post.html"
+
+        // $("#myModal").modal("show")
     })
 }
 
