@@ -1,68 +1,78 @@
-.card-profiles {
-    padding: 2rem;
-    border: 1px solid lightgrey;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    .profiles {
-        display: flex;
-        margin-top: 1rem;
-        span {
-            color: gray;
-        }
-        p {
-          color: lightgray;
-        }     
-        img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 1rem;
-        }
-    }
+.header-fluid{
+    background-color: white;
 }
-.hashtag {
-    color: lightgrey;
+.profile1{
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
 }
-.titulo-hashtag {
-    color: gray;
-    margin-right: 5px;
+
+.search-bar{
+    position: absolute;
+    width: 20%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #b5bdc4;
 }
-.titulo-hashtag:hover {
+
+.top-header{
+    max-height: 60px;
+    background-color: white;
+   
+
+}
+.logo{
+    height: 30px;
+}
+.btn{
+    background-color: #4150f5;
+    color: white;
+}
+
+.dropbtn {
+    height: 30px;
+    color: white;
+    padding: 0px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    
+    box-shadow: 10px 10px 0px 0px black;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
     color: black;
-}
-.p-profiles h2:hover {
-    color: blue;
-}
-.card-reacciones {
-    display: flex;
-}
-.initial-card {
-    display: flex;
-    justify-content: flex-start;    
-    color: lightgray;
-    .small {
-        margin-right: 4px;
-    }
-}
-.final-card {
-    display: flex;
-    margin-left: 150px;
-    justify-content: flex-end;
-    align-items: flex-end;
-    color: lightgray;
-    .small {
-        margin-right: 4px;
-    }
-}
-.tiempo-leido {
-    color: lightgray;
-}
-.profiles p:hover {
-    color: black;
-}
-.profiles span:hover {
-    color: black;
-}
-.new-post-link{
+    padding: 12px 16px;
     text-decoration: none;
-}
+    display: block;
+    border-radius: 1px solid black;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .right{
+      position: relative;
+  }
+
+  .emmanuel-pic{
+      position: absolute;
+      height: 30px;
+      border-radius: 50%;
+      right: 3px;
+      top: 3px;
+      z-index: 1;
+  }
