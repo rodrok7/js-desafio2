@@ -24,3 +24,12 @@ $(document).ready(function () {
   });
 });
 
+// Función de filtrado por nombre
+const filterByName = () =>{
+    let result = personArray.filter((item,key) => {
+      let character = document.getElementById("nameFilterInput").value
+      console.log(character);
+      return item.name.toLowerCase().includes(character) 
+    })
+    fillTable(result)
+}
