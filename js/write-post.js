@@ -6,7 +6,7 @@ $('.image-add-button').click( ()=> {
 })
 let cardsCollections = {};
 let newPostObject = {
-                    "date": moment().substract(30,"days").format("YYYY-MM-DD HH:mm:ss"),
+                    "date": moment().format("YYYY-MM-DD HH:mm:ss"),
                     "name": "JuanPa",
                     "lastName": "Sánchez" 
                     }
