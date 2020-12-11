@@ -167,31 +167,33 @@
   text-decoration: none;
 }
 
-/*aside 2 article*/
-.aside-2 {
-  list-style: none;
+.aside-derecho .list-group-news {
+  background-color: #f9fafa;
 }
 
-.a-2, .art-autor {
-  padding: 5%;
+.aside-derecho .list-group-news a:hover {
+  background-color: white;
 }
 
-.info-xtra-autor, .art-autor {
-  background-color: #fafafa;
-  padding: 5%;
-}
-
-/*aside 2 article*/
-.header-c {
-  max-width: 100wv;
-  margin: auto;
+.aside-derecho .footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.aside-derecho .comments {
+  font-size: 90%;
+  color: gray;
 }
 
 #aside-izquierdo .profile {
@@ -959,5 +961,65 @@ body {
 
 .main-write-post {
   margin-left: 20%;
+}
+
+.my-stuff-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 50vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.my-stuff-container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #202428;
+}
+
+.my-stuff-container .item .heart:hover {
+  background-color: #ffa8a8;
+  color: #ff3333;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.my-stuff-container .item .horse:hover {
+  background-color: #99c3bb;
+  color: #19efc7;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.my-stuff-container .item .bookmark:hover {
+  background-color: #6a76d1;
+  color: #000be5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.my-stuff-container .item .dots:hover {
+  background-color: #777777;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 /*# sourceMappingURL=style.css.map */
