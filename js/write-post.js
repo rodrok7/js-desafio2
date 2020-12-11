@@ -6,7 +6,7 @@ $('.image-add-button').click( ()=> {
 })
 let cardsCollections = {};
 let newPostObject = {
-                    "date": moment().substract(30,"days").format("YYYY-MM-DD HH:mm:ss"),
+                    "date": moment().format("YYYY-MM-DD HH:mm:ss"),
                     "name": "JuanPa",
                     "lastName": "Sánchez" 
                     }
@@ -25,7 +25,8 @@ const getCards = () =>{
         success: response => {
             cardsCollections = response; 
             console.log( cardsCollections )
-            printCards(cardsCollections)  
+            printCards(cardsCollections)
+            addToCardListener()  
         },
         error: error => {
             console.log( error )
@@ -42,7 +43,7 @@ const printCards = cardsToPrint => {
         console.log(typeof(cardsToPrint[key].date))
         console.log(tags)
 
-        let entryCard = `<div class="card">
+        let entryCard = `<div class="card" data-card-key=${key}>
                                 <span class=""><img class="card-img-top" src="${picUrl}"
                                     alt="Card image cap"></span>
                                 <div class="card-body">
@@ -84,7 +85,9 @@ const printCards = cardsToPrint => {
     }
 }
 
-getCards();
+
+
+
 const savePost = newPost => {
 
     $.ajax({
@@ -93,7 +96,6 @@ const savePost = newPost => {
         data: JSON.stringify(newPost),
         success: response => {
             console.log( response )
-
             
         },
         error: error => {
@@ -101,13 +103,39 @@ const savePost = newPost => {
         }
     });
 }
+
+const addToCardListener = () => {
+    $('#pills-feed .card').click(event => {
+        console.log(event.target)
+        let cardKey = $(event.target).closest(".card").data("card-key")
+        let selectedCard = cardsCollections[cardkey]
+
+        
+        let {picUrl, title, tags, name, lastName, text, date} = selectedCard
+        $("#myTopImg").attr("src", picUrl );
+        $("#nombreDeUsuario").text(name + " " + lastName)
+        $("#fechaDelPost").text(moment(date, "YYYY-MM-DD HH:mm:ss").fromNow())
+        $("#misHashTags").empty()
+        selectedCard[tags].forEach((item, index) =>{
+            $("#misHashTags").append(`<a href=""><span class="crayon">${item[index]}</span>beginners</a>`)
+        })
+        $("#mytitlePage").text(title)
+        $("#myText").text(text)
+        
+        window.location.href = "post.html"
+    })
+}
+
     
 $("#savePost").click( () =>{
         savePost(newPostObject)
         window.location.href = "index.html";
-        //getCards();
+        // getCards();
  })
 
+getCards();
+  
+  
 
 
 
