@@ -1,38 +1,47 @@
-$(".image-add-button").click(() => {
-  $(".image-add-button").hide();
-  $(".input-add-image").toggleClass("d-none");
-});
-let cardsCollections = {};
+$('.image-add-button').click( ()=> {
+    $('.image-add-button').hide()
+    $(".input-add-image").toggleClass("d-none")
+    
+
+})
+let cardsCollection = {};
 let newPostObject = {
-  date: moment().format("YYYY-MM-DD HH:mm:ss"),
-  name: "JuanPa",
-  lastName: "Sánchez",
-};
-let tagsArray = [];
-$("input, textarea").change((event) => {
-  let name = event.target.name;
-  let value = event.target.value;
-  value =
-    event.target.name == "tags"
-      ? (newPostObject[name] = value.split(" "))
-      : event.target.value;
-  newPostObject[name] = value;
-  console.log(newPostObject);
-});
-const getCards = () => {
-  $.ajax({
-    url: "https://cards-6f1a0-default-rtdb.firebaseio.com/.json",
-    method: "GET",
-    success: (response) => {
-      cardsCollections = response;
-      console.log(cardsCollections);
-      printCards(cardsCollections);
-    },
-    error: (error) => {
-      console.log(error);
-    },
-  });
-};
+                    "date": moment().subtract(30,"days").format("YYYY-MM-DD HH:mm:ss"),
+                    "name": "JuanPa",
+                    "lastName": "Sánchez" 
+                    }
+let tagsArray = []
+$("input, textarea").change(event => {
+    let name = event.target.name
+    let value = event.target.value
+    value = event.target.name == "tags"? newPostObject[name] = value.split(" ") : event.target.value
+    newPostObject[name] = value
+    
+})
+const getCards = () =>{
+    $.ajax({
+        url: "https://cards-6f1a0-default-rtdb.firebaseio.com/.json",
+        method: "GET",
+        success: response => {
+            cardsCollection = response; 
+            
+            printCards("feed",cardsCollection)  
+        },
+        error: error => {
+            console.log( error )
+        }
+    });
+}
+
+
+const printCards = (placeToPrint, cardsToPrint) => {
+    
+    placeToPrint = placeToPrint == "" ? 'feed' : placeToPrint
+    $(`#pills-${placeToPrint}`).empty()
+    for(key in cardsToPrint){
+        console.log(cardsToPrint[key])
+        let {name, lastName, picUrl, date, title, text, tags} = cardsToPrint[key]
+        
 
 const printCards = (cardsToPrint) => {
   console.log(cardsToPrint);
@@ -83,35 +92,101 @@ const printCards = (cardsToPrint) => {
                             </a>
                         </div>
 
-                        <div class="icon-left">
-                            <small class="text-muted timer">1 min read</small>
-                            <button type="button" class="btn btn-less-light" onclick="clickSave(this)">
-                                Save
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>`;
-                            $("#pills-feed").prepend(entryCard);
-  }
-};
-
-const savePost = (newPost) => {
-  $.ajax({
-    url: "https://cards-6f1a0-default-rtdb.firebaseio.com/.json",
-    method: "POST",
-    data: JSON.stringify(newPost),
-    success: (response) => {
-    //   console.log(response);
-    },
-    error: (error) => {
-      console.log(error);
-    },
-  });
-};
+                                    <div class="icon-left">
+                                        <small class="text-muted timer">1 min read</small>
+                                        <button type="button" class="btn btn-less-light" onclick="clickSave(this)">
+                                        Save
+                                        </button>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>`
+                            $(`#pills-${placeToPrint}`).prepend(entryCard);
+    }
+}
 
 getCards();
+
+const savePost = newPost => {
+
+    $.ajax({
+        url: "https://cards-6f1a0-default-rtdb.firebaseio.com/.json",
+        method: "POST",
+        data: JSON.stringify(newPost),
+        success: response => {
+           
+
+            
+        },
+        error: error => {
+            console.log( error )
+        }
+    });
+}
+    
+$("#savePost").click( () =>{
+        savePost(newPostObject)
+        window.location.href = "index.html";
+        
+ })
+
+$("#pills-week-tab").click(() => {
+    let filteredPosts = {}
+    let cardDate = moment(cardsCollection[key].date, "YYYYMMDD")
+    let todaysDate = moment()
+    for (key in cardsCollection) {
+        if (todaysDate.diff(cardDate, "weeks") === 0) {
+            filteredPosts[key]= cardsCollection[key]
+        }
+        
+        
+    }
+    printCards("week",filteredPosts)
+})
+
+$("#pills-month-tab").click(() => {
+    let filteredPosts = {}
+    let cardDate = moment(cardsCollection[key].date, "YYYYMMDD")
+    let todaysDate = moment()
+    for (key in cardsCollection) {
+        if (todaysDate.diff(cardDate, "months") === 0) {
+            filteredPosts[key]= cardsCollection[key]
+        }
+        
+        
+    }
+    printCards("month",filteredPosts)
+})
+
+$("#pills-year-tab").click(() => {
+    let filteredPosts = {}
+    let cardDate = moment(cardsCollection[key].date, "YYYYMMDD")
+    let todaysDate = moment()
+    for (key in cardsCollection) {
+        if (todaysDate.diff(cardDate, "years") === 0) {
+            filteredPosts[key]= cardsCollection[key]
+        }
+        
+        
+    }
+    printCards("year",filteredPosts)
+})
+
+$("#pills-infinity-tab").click(() => {
+    let filteredPosts = {}
+    let cardDate = moment(cardsCollection[key].date, "YYYYMMDD")
+    let todaysDate = moment()
+    for (key in cardsCollection) {
+        if (todaysDate.diff(cardDate, "days") >= 0) {
+            filteredPosts[key]= cardsCollection[key]
+        }
+        
+        
+    }
+    printCards("infinity",filteredPosts)
+})
+    
 
 $("#savePost").click(() => {
   savePost(newPostObject);
