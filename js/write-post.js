@@ -39,7 +39,8 @@ const printCards = cardsToPrint => {
     $("#pills-feed").empty()
     for(key in cardsToPrint){
         let {name, lastName, picUrl, date, title, text, tags} = cardsToPrint[key]
-        console.log(cardsToPrint[key])
+        console.log(typeof(cardsToPrint[key].date))
+        console.log(tags)
         let entryCard = `<div class="card">
                                 <span class=""><img class="card-img-top" src="${picUrl}"
                                     alt="Card image cap"></span>
@@ -47,7 +48,7 @@ const printCards = cardsToPrint => {
                                 <img class="profile_min" src="images/aside1/prision-mike.png" alt="">
                                 <div class="info_personal d-inline-block flex-column">
                                     <span class="card-text d-block name"><a class="">${name} ${lastName}</a></span>
-                                    <span class="card-text d-block date"><a class="">${date}</a></span>
+                                    <span class="card-text d-block date"><a class="">${moment(date, "YYYYMMDD").fromNow()}</a></span>
                                 </div>
 
                                 <div class="content-center">
