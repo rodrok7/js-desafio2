@@ -8,7 +8,8 @@ let cardsCollection = {};
 let newPostObject = {
                     "date": moment().subtract(30,"days").format("YYYY-MM-DD HH:mm:ss"),
                     "name": "JuanPa",
-                    "lastName": "Sánchez" 
+                    "lastName": "Sánchez",
+                    "savedPost": false
                     }
 let tagsArray = []
 $("input, textarea").change(event => {
@@ -41,68 +42,60 @@ const printCards = (placeToPrint, cardsToPrint) => {
     for(key in cardsToPrint){
         console.log(cardsToPrint[key])
         let {name, lastName, picUrl, date, title, text, tags} = cardsToPrint[key]
-        
-
-const printCards = (cardsToPrint) => {
-  console.log(cardsToPrint);
-  $("#pills-feed").empty();
-  for (key in cardsToPrint) {
-    let { name, lastName, picUrl, date, title, text, tags } = cardsToPrint[key];
-    
-    let entryCard = `
-        <div class="card">
-            <a href="./post.html?postid=${key}" class="singleCard">
-                <span class="">
-                    <img class="card-img-top" src="${picUrl}" alt="Card image cap">
-                </span>
-            </a>
-                
-            <div class="card-body">
-                <img class="profile_min" src="images/aside1/prision-mike.png" alt="">
-                <div class="info_personal d-inline-block flex-column">
-                    <span class="card-text d-block name">
-                        <a class="">${name} ${lastName}</a>
-                    </span>
-                    <span class="card-text d-block date">
-                        <a class="">${moment(
-                            date,
-                            "YYYY-MM-DD HH:mm:ss"
-                            ).fromNow()}
+            console.log(tags)
+            console.log(typeof(picUrl))
+                let entryCard = `
+                    <div class="card">
+                        <a href="./post.html?postid=${key}" class="singleCard">
+                            <span class="">${picUrl !== "" ? `<img class="card-img-top" src="${picUrl}" alt="Card image cap">` : ``}
+                            </span>
                         </a>
-                    </span>
-                </div>
+                            
+                        <div class="card-body">
+                            <img class="profile_min" src="images/aside1/prision-mike.png" alt="">
+                            <div class="info_personal d-inline-block flex-column">
+                                <span class="card-text d-block name">
+                                    <a class="">${name} ${lastName}</a>
+                                </span>
+                                <span class="card-text d-block date">
+                                    <a class="">${moment(
+                                        date,
+                                        "YYYY-MM-DD HH:mm:ss"
+                                        ).fromNow()}
+                                    </a>
+                                </span>
+                            </div>
 
-                <div class="content-center">
-                    <h1 class="card-title mt-3">
-                        <a href="./post.html?postid=${key}">${title}</a>
-                    </h1>
-                    <div id="myHashtags" class="hashtags">
-                        <a href=""><span class="crayon">#</span>${tags}</a>
-                    </div>
-
-                    <div class="card-b-content d-flex justify-content-between align-items-center">
-                        <div class="icon-right">
-                            <a href="">
-                                <img src="images/icon_cards/icono_corazon.svg" alt="">
-                                <span>8 reaction</span>
-                            </a>
-                            <a href="">
-                                <img src="images/icon_cards/icon_comment.svg" alt="">
-                                <span>Add comment</span>
-                            </a>
-                        </div>
-
-                                    <div class="icon-left">
-                                        <small class="text-muted timer">1 min read</small>
-                                        <button type="button" class="btn btn-less-light" onclick="clickSave(this)">
-                                        Save
-                                        </button>
-                                    </div>
-                                    </div>
+                            <div class="content-center">
+                                <h1 class="card-title mt-3">
+                                    <a href="./post.html?postid=${key}">${title}</a>
+                                </h1>
+                                <div id="myHashtags" class="hashtags">
+                                ${(tags || []).map(item => `<a href=""><span class="crayon">${item}</span></a>`).join(` `)}
                                 </div>
-                                </div>
-                            </div>`
-                            $(`#pills-${placeToPrint}`).prepend(entryCard);
+                                <div class="card-b-content d-flex justify-content-between align-items-center">
+                                    <div class="icon-right">
+                                        <a href="">
+                                            <img src="images/icon_cards/icono_corazon.svg" alt="">
+                                            <span>8 reaction</span>
+                                        </a>
+                                        <a href="">
+                                            <img src="images/icon_cards/icon_comment.svg" alt="">
+                                            <span>Add comment</span>
+                                        </a>
+                                    </div>
+
+                                                <div class="icon-left">
+                                                    <small class="text-muted timer">1 min read</small>
+                                                    <button type="button" class="btn btn-less-light" onclick="clickSave(this)">
+                                                    Save
+                                                    </button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>`
+                                        $(`#pills-${placeToPrint}`).prepend(entryCard);
     }
 }
 
@@ -179,6 +172,19 @@ $("#pills-infinity-tab").click(() => {
     let todaysDate = moment()
     for (key in cardsCollection) {
         if (todaysDate.diff(cardDate, "days") >= 0) {
+            filteredPosts[key]= cardsCollection[key]
+        }
+        
+        
+    }
+    printCards("infinity",filteredPosts)
+})
+$("#pills-lates-tab").click(() => {
+    let filteredPosts = {}
+    let cardDate = moment(cardsCollection[key].date, "YYYY-MM-DD HH:mm:ss")
+    let todaysDate = moment()
+    for (key in cardsCollection) {
+        if (todaysDate.diff(cardDate, "minutes") >= 0) {
             filteredPosts[key]= cardsCollection[key]
         }
         
