@@ -67,7 +67,7 @@ const printCards = (cardsToPrint) => {
                     <h1 class="card-title mt-3">
                         <a href="./post.html?postid=${key}">${title}</a>
                     </h1>
-                    <div class="hashtags">
+                    <div id="myHashtags" class="hashtags">
                         <a href=""><span class="crayon">#</span>${tags}</a>
                     </div>
 
