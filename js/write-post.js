@@ -41,6 +41,7 @@ const printCards = cardsToPrint => {
         let {name, lastName, picUrl, date, title, text, tags} = cardsToPrint[key]
         console.log(typeof(cardsToPrint[key].date))
         console.log(tags)
+
         let entryCard = `<div class="card">
                                 <span class=""><img class="card-img-top" src="${picUrl}"
                                     alt="Card image cap"></span>
