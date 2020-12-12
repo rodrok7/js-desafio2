@@ -125,7 +125,7 @@ $("#pills-week-tab").click(() => {
     let todaysDate = moment()
     for (key in cardsCollection) {
         let cardDate = moment(cardsCollection[key].date, "YYYYMMDD HH:mm:ss")
-        if (todaysDate.diff(cardDate, "weeks") === 0) {
+        if (todaysDate.diff(cardDate, "weeks") > 1) {
             filteredPosts[key]= cardsCollection[key]
         }
     }
@@ -138,7 +138,7 @@ $("#pills-month-tab").click(() => {
     let todaysDate = moment()
     for (key in cardsCollection) {
         let cardDate = moment(cardsCollection[key].date, "YYYYMMDD HH:mm:ss")
-        if (todaysDate.diff(cardDate, "months") === 0) {
+        if (todaysDate.diff(cardDate, "months") > 1) {
             filteredPosts[key]= cardsCollection[key]
         }
     }
@@ -151,7 +151,7 @@ $("#pills-year-tab").click(() => {
     let todaysDate = moment()
     for (key in cardsCollection) {
         let cardDate = moment(cardsCollection[key].date, "YYYYMMDD HH:mm:ss")
-        if (todaysDate.diff(cardDate, "years") === 0) {
+        if (todaysDate.diff(cardDate, "years") > 1) {
             filteredPosts[key]= cardsCollection[key]
         }
     }
