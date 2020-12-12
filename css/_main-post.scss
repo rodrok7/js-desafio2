@@ -187,12 +187,20 @@ select{
                             .btn-less-light{
                                 background-color: $color-button-base;
                                 padding: 6px 14px;
+                                color: #222222;
                                 &:hover{
                                     background-color: $color-button-hover;
                                 } 
                                 &:focus{
                                     background-color: transparent;
                                     border: none;
+                                    
+                                }
+                                &:active{
+                                    color: #222222;
+                                }
+                                &:visited{
+                                    color: #222222;
                                 }
                             }   
                         }
@@ -202,6 +210,25 @@ select{
         }
     }
 }
+.btn-less-light{
+                                background-color: $color-button-base;
+                                padding: 6px 14px;
+                                color: #222222;
+                                &:hover{
+                                    background-color: $color-button-hover;
+                                } 
+                                &:focus{
+                                    background-color: transparent;
+                                    border: none;
+                                    
+                                }
+                                &:active{
+                                    color: #222222;
+                                }
+                                &:visited{
+                                    color: #222222;
+                                }
+                            }
 /*Comienza el CSS del Post*/
 .posts{
     font-size: x-large;

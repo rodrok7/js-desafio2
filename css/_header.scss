@@ -27,6 +27,15 @@
 .btn{
     background-color: #4150f5;
     color: white;
+    .save-key{
+        color: $color-black;
+        &:active{
+            color: $color-black;
+        }
+        &:visited{
+            color: $color-black;
+        }
+    }
 }
 
 .dropbtn {

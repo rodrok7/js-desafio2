@@ -36,11 +36,11 @@ const getCards = () =>{
 
 
 const printCards = (placeToPrint, cardsToPrint) => {
-    
+    console.log(cardsToPrint)
     placeToPrint = placeToPrint == "" ? 'feed' : placeToPrint
     $(`#pills-${placeToPrint}`).empty()
     for(key in cardsToPrint){
-        let {name, lastName, picUrl, date, title, text, tags} = cardsToPrint[key]
+        let {name, lastName, picUrl, date, title, text, tags, savedPost} = cardsToPrint[key]
                 let entryCard = `
                     <div class="card">
                         <a href="./post.html?postid=${key}" class="singleCard">
@@ -84,10 +84,9 @@ const printCards = (placeToPrint, cardsToPrint) => {
 
                                                 <div class="icon-left">
                                                     <small class="text-muted timer">1 min read</small>
-                                                    <button type="button" class="btn btn-less-light" onclick="clickSave(this)">
-                                                    Save
+                                                    <button type="button" data-key="${key}" data-savedpost="${savedPost}" class="btn btn-less-light save-key">
+                                                    ${savedPost ? 'Saved' : 'Save'}
                                                     </button>
-                                                    </a>
                                                 </div>
                                                 </div>
                                             </div>
@@ -98,6 +97,34 @@ const printCards = (placeToPrint, cardsToPrint) => {
 }
 
 getCards();
+
+// Añadir eventHandler a button dinámico
+$(document).on("click", ".save-key", event => {
+    console.log(event.target)
+    let id = $(event.target).data("key");
+    let savedValue = $(event.target).data("savedpost");
+    console.log(id);
+    console.log(savedValue);
+    saveReadingList(id, savedValue)
+    $(event.target).data("savedpost", !savedValue);
+    console.log(savedValue);
+    $(event.target).text(savedValue ? "Save" : "Saved")
+    console.log($(event.target).text())
+})
+
+const saveReadingList = (id, savedValue) => {
+    console.log(savedValue)
+    let data = {"savedPost": !savedValue}
+    $.ajax({
+        url : `https://cards-6f1a0-default-rtdb.firebaseio.com/${id}.json`,
+        data : JSON.stringify(data),
+        type : 'PATCH',
+        // contentType : 'application/json',
+        success: function() {
+            return console.log("Todo ok")
+        }
+    });     
+}
 
 const savePost = newPost => {
 

@@ -18,6 +18,7 @@ function clickSave(content) {
   }
 }
 
+
 $(document).ready(function () {
   $("#headingOne").click(function () {
     $("#headingOne").hide();
