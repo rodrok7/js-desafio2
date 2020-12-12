@@ -6,7 +6,7 @@ console.log(idPost)
 
 const saveToReadingList = id => {
     $.ajax({
-                url: `https://cards-6f1a0-default-rtdb.firebaseio.com/cards/${id}.json`,
+                url: `https://cards-6f1a0-default-rtdb.firebaseio.com/${id}.json`,
                 method: "PATCH",
                 data:JSON.stringify({"savedPost": true}),
                 success: (response) => {
