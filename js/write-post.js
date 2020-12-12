@@ -6,7 +6,7 @@ $('.image-add-button').click( ()=> {
 })
 let cardsCollection = {};
 let newPostObject = {
-                    "date": moment().subtract(30,"days").format("YYYY-MM-DD HH:mm:ss"),
+                    "date": moment().format("YYYY-MM-DD HH:mm:ss"),
                     "name": "JuanPa",
                     "lastName": "Sánchez",
                     "savedPost": false
@@ -185,10 +185,4 @@ $("#pills-latest-tab").click(() => {
     console.log(filteredPosts.length);
     printCards("latest",filteredPosts)
 })
-    
 
-$("#savePost").click(() => {
-  savePost(newPostObject);
-  window.location.href = "index.html";
-  // getCards();
-});
