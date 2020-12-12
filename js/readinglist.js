@@ -40,7 +40,7 @@ const printSaved = (cardsToPrint) => {
     console.log(savedPost);
     if(!savedPost) continue;
     let entryCard = `
-      <div class="saved-card m-2 p-2">
+      <div class="saved-card m-4 p-2">
         <div class="mb-2 d-inline-block">
           <img class="profile_min" src="images/aside1/prision-mike.png" alt="">
         </div>
@@ -66,7 +66,8 @@ const printSaved = (cardsToPrint) => {
               ${(tags || []).map(item => `<a href=""><span class="crayon">${item}</span></a>`).join(` `)}
           </span>
         </div>
-      </div>`
+      </div>
+     <p>&nbsp;</p> `
     $('#savedCards').prepend(entryCard);
   }
 }
