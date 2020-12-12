@@ -84,7 +84,7 @@ const printCards = (placeToPrint, cardsToPrint) => {
 
                                                 <div class="icon-left">
                                                     <small class="text-muted timer">1 min read</small>
-                                                    <a href="/readinglist.html?postid=${key}" ><button type="button" class="btn btn-less-light" onclick="clickSave(this)">
+                                                    <button type="button" class="btn btn-less-light" onclick="clickSave(this)">
                                                     Save
                                                     </button>
                                                     </a>
