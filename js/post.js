@@ -1,4 +1,4 @@
-let params = new URLSearchParams(document.location.search.substring(0));
+let params = new URLSearchParams(document.location.search.substring(1));
 let idPost = params.get("postid")
 console.log(idPost)
 
