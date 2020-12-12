@@ -6,7 +6,7 @@ console.log(idPost)
 
 const saveToReadingList = id => {
     $.ajax({
-                url: `https://cards-6f1a0-default-rtdb.firebaseio.com/cards/${id}.json`,
+                url: `https://cards-6f1a0-default-rtdb.firebaseio.com/${id}.json`,
                 method: "PATCH",
                 data:JSON.stringify({"savedPost": true}),
                 success: (response) => {
@@ -20,25 +20,3 @@ const saveToReadingList = id => {
 };
 saveToReadingList(idPost)
 
-
-// const getPostById = id => {
-    
-//     $.ajax({
-//         url: `https://cards-6f1a0-default-rtdb.firebaseio.com/${id}.json`,
-//         method: "GET",
-//         success: (response) => {
-//             fillReadingList(response)
-//           console.log(response);
-         
-//         },
-//         error: (error) => {
-//           console.log(error);
-//         }
-//       });
-// };
-// getPostById(idPost);
-
-// const fillReadingList = (id) => {
-//     let article = ``
-//     ("p-3")
-// }
