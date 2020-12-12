@@ -40,10 +40,7 @@ const printCards = (placeToPrint, cardsToPrint) => {
     placeToPrint = placeToPrint == "" ? 'feed' : placeToPrint
     $(`#pills-${placeToPrint}`).empty()
     for(key in cardsToPrint){
-        console.log(cardsToPrint[key])
         let {name, lastName, picUrl, date, title, text, tags} = cardsToPrint[key]
-            console.log(tags)
-            console.log(typeof(picUrl))
                 let entryCard = `
                     <div class="card">
                         <a href="./post.html?postid=${key}" class="singleCard">
@@ -122,76 +119,71 @@ const savePost = newPost => {
 $("#savePost").click( () =>{
         savePost(newPostObject)
         window.location.href = "index.html";
-        
  })
 
 $("#pills-week-tab").click(() => {
     let filteredPosts = {}
-    let cardDate = moment(cardsCollection[key].date, "YYYYMMDD")
     let todaysDate = moment()
     for (key in cardsCollection) {
+        let cardDate = moment(cardsCollection[key].date, "YYYYMMDD HH:mm:ss")
         if (todaysDate.diff(cardDate, "weeks") === 0) {
             filteredPosts[key]= cardsCollection[key]
         }
-        
-        
     }
+    console.log(Object.keys(filteredPosts).length);
     printCards("week",filteredPosts)
 })
 
 $("#pills-month-tab").click(() => {
     let filteredPosts = {}
-    let cardDate = moment(cardsCollection[key].date, "YYYYMMDD")
     let todaysDate = moment()
     for (key in cardsCollection) {
+        let cardDate = moment(cardsCollection[key].date, "YYYYMMDD HH:mm:ss")
         if (todaysDate.diff(cardDate, "months") === 0) {
             filteredPosts[key]= cardsCollection[key]
         }
-        
-        
     }
+    console.log(Object.keys(filteredPosts).length);
     printCards("month",filteredPosts)
 })
 
 $("#pills-year-tab").click(() => {
     let filteredPosts = {}
-    let cardDate = moment(cardsCollection[key].date, "YYYYMMDD")
     let todaysDate = moment()
     for (key in cardsCollection) {
+        let cardDate = moment(cardsCollection[key].date, "YYYYMMDD HH:mm:ss")
         if (todaysDate.diff(cardDate, "years") === 0) {
             filteredPosts[key]= cardsCollection[key]
         }
-        
-        
     }
+    console.log(Object.keys(filteredPosts).length);
     printCards("year",filteredPosts)
 })
 
 $("#pills-infinity-tab").click(() => {
     let filteredPosts = {}
-    let cardDate = moment(cardsCollection[key].date, "YYYYMMDD")
     let todaysDate = moment()
     for (key in cardsCollection) {
+        let cardDate = moment(cardsCollection[key].date, "YYYY-MM-DD HH:mm:ss")
         if (todaysDate.diff(cardDate, "days") >= 0) {
             filteredPosts[key]= cardsCollection[key]
         }
-        
-        
     }
+    console.log(Object.keys(filteredPosts).length);
     printCards("infinity",filteredPosts)
 })
-$("#pills-lates-tab").click(() => {
+
+$("#pills-latest-tab").click(() => {
     let filteredPosts = {}
-    let cardDate = moment(cardsCollection[key].date, "YYYY-MM-DD HH:mm:ss")
     let todaysDate = moment()
     for (key in cardsCollection) {
-        if (todaysDate.diff(cardDate, "minutes") >= 0) {
+        let cardDate = moment(cardsCollection[key].date, "YYYY-MM-DD HH:mm:ss")
+        if (todaysDate.diff(cardDate, "hours") <= 3) {
             filteredPosts[key]= cardsCollection[key]
         }
-        
-        
     }
-    printCards("infinity",filteredPosts)
+    console.log(filteredPosts.length);
+    printCards("latest",filteredPosts)
 })
     
 

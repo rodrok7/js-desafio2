@@ -13,21 +13,39 @@
 </head>
 
 <body>
-  <div class="modal" tabindex="-1" role="dialog" id="myModal">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Save changes</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+  <!-- Este es el elemento fixed (header) -->
+  <div class="navbar fixed-top navbar-light bg-light shadow-sm p-1 mb-5 bg-white rounded">
+    <div class="container nav-top">
+      <a class="navbar-brand" href="#">
+        <i class="pl-1 fab fa-dev" title="dev"></i>
+      </a>
+      <form class="form-inline flex-grow-1 mr-1 mr-lg-5">
+        <input type="hidden" name="utf8" id="" placeholder="" autocomplete="" value="✓">
+        <input class="form-control w-100" type="search" placeholder="Search..." aria-label="Search">
+      </form>
+      <a href="write-post.html">
+        <button type="button "
+          class="btn btn-primary shadow-none font-weight-bold mx-2 text-nowrap d-none d-md-block ml-lg-5" id="newPost">
+          Write a post </button>
+      </a>
+
+      <a class="navbar-brand rounded-circle top-icons p-1 d-flex align-items-center" href="#">
+        <img src="images/post-icon.png" class="rounded-circle" alt="Connect" loading="lazy">
+      </a>
+      <a class="navbar-brand rounded-circle top-icons p-1 d-flex align-items-center" href="#">
+        <img src="images/notification-icon.png" class="rounded-circle" alt="Notifications" loading="lazy">
+      </a>
+      <div class="dropdown">
+        <img src="images/perfil-icon.png" alt="" height="30" width="30" class="rounded-circle ml-3">
+        <div class="dropdown-content rounded border border-dark">
+          <a href="#">NajeraDev <br> @najeradev</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Write a Post</a>
+          <a href="#">Reading list</a>
+          <a href="#">Settings</a>
+          <a href="#">Key Links</a>
+          <a href="#">Sign Out</a>
         </div>
       </div>
     </div>
@@ -43,29 +61,27 @@
                   <input type="text" placeholder="Search..." class="ml-5 search-bar">
              </div>
              <div class="right">
-                 <a href="/write-post.html"><button class="btn mr-3"><strong> Write a post</strong></button></a> 
-                 <a href=""> <img src="/images/header/connect.svg" alt="connect ml-3"></a>
-                 <a href=""> <img src="/images/header/bell.svg" alt="bell" class="ml-3"></a>
-                 <div class="dropdown">
-                     <img src="/images/681433-original.jpeg " alt="" height="30" width="30" class="rounded-circle ml-3">
-                     <div class="dropdown-content rounded border border-dark">
-                         <a href="#">NajeraDev <br> @najeradev</a>
-                         <a href="#">Dashboard</a>
-                         <a href="#">Write a Post</a>
-                         <a href="/readinglist.html">Reading list</a>
-                         <a href="#">Settings</a>
-                         <a href="#">Key Links</a>
-                         <a href="#">Sign Out</a>
-                     
-                     </div>
-                 
-                 </div>
+                <a href="/write-post.html"><button class="btn mr-3"><strong> Write a post</strong></button></a> 
+                <a href=""> <img src="/images/header/connect.svg" alt="connect ml-3"></a>
+                <a href=""> <img src="/images/header/bell.svg" alt="bell" class="ml-3"></a>
+                <div class="dropdown">
+                  <img src="/images/681433-original.jpeg " alt="" height="30" width="30" class="rounded-circle ml-3">
+                  <div class="dropdown-content rounded border border-dark">
+                      <a href="#">NajeraDev <br> @najeradev</a>
+                      <a href="#">Dashboard</a>
+                      <a href="#">Write a Post</a>
+                      <a href="/readinglist.html">Reading list</a>
+                      <a href="#">Settings</a>
+                      <a href="#">Key Links</a>
+                      <a href="#">Sign Out</a>
+                  </div>                 
+                </div>
              </div>    
-           </header>
-       </div>
-     </div>
-     
-</div>
+          </header>
+        </div>
+      </div>
+    </div>
+
 
 
 
@@ -120,7 +136,7 @@
               <div class="">
                 <div class="" id="headingOne">
                   <h5 class="mb-0 desapear_button">
-                    <button class="btn btn-link more_button" data-toggle="collapse" data-target="#collapseOne"
+                    <button class="button-more" data-toggle="collapse" data-target="#collapseOne"
                       aria-expanded="true" aria-controls="collapseOne">
                       More...
                     </button>
@@ -245,12 +261,12 @@
               <div class="col-8 d-flex flex-nowrap justify-content-between align-items-center">
                 <h5 class="post-title">Posts</h5>
                 <select class="" name="Feed" id="feed-filter-select" onclick="changeView(this.value)">
-                  <option value="Feed">Feed</option>
-                  <option value="Week">Week</option>
-                  <option value="Month">Month</option>
-                  <option value="Year">Year</option>
-                  <option value="Infinity">Infinity</option>
-                  <option value="Latest">Latest</option>
+                  <option value="feed">Feed</option>
+                  <option value="feed">Week</option>
+                  <option value="feed">Month</option>
+                  <option value="feed">Year</option>
+                  <option value="feed">Infinity</option>
+                  <option value="feed">Latest</option>
                 </select>
               </div>
               <a href="#" class="rayo" onclick="on()"><img src="images/icon_nav/rayo_nav.svg" alt=""></a>
@@ -258,53 +274,49 @@
 
             <div class="tab-content" id="pills-tabContent">
               <div class="tab-pane fade active show" id="pills-feed" role="tabpanel" aria-labelledby="pills-feed-tab">
-                <a href="#">
-                  <div class="card">
-                    <span class=""><img class="card-img-top" src="./images/articles/feed1.jpg"
-                        alt="Card image cap">
-                    </span>
+                <div class="card">
+                  <span class=""><img class="card-img-top" src="./images/articles/feed1.jpg"
+                      alt="Card image cap"></span>
 
 
-                    <div class="card-body">
-                      <img class="profile_min" src="images/profile/p6.jpg" alt="">
-                      <div class="info_personal d-inline-block flex-column">
-                        <span class="card-text d-block name"><a class="">Teresa Holfeld</a></span>
-                        <span class="card-text d-block date"><a class="">Nov 2 (6 days ago)</a></span>
+                  <div class="card-body">
+                    <img class="profile_min" src="images/profile/p6.jpg" alt="">
+                    <div class="info_personal d-inline-block flex-column">
+                      <span class="card-text d-block name"><a class="">Teresa Holfeld</a></span>
+                      <span class="card-text d-block date"><a class="">Nov 2 (6 days ago)</a></span>
+                    </div>
+
+                    <div class="content-center">
+                      <h1 class="card-title mt-3"> <a href="#">Functions, Parameters and Return Values</a></h1>
+                      <div class="hashtags">
+                        <a href=""><span class="crayon">#</span>beginners</a>
+                        <a href=""><span class="crayon">#</span>codenewbie</a>
+                        <a href=""><span class="crayon">#</span>webdev</a>
+                        <a href=""><span class="crayon">#</span>programming</a>
                       </div>
 
-                      <div class="content-center">
-                        <h1 class="card-title mt-3"> <a href="#">Functions, Parameters and Return Values</a></h1>
-                        <div class="hashtags">
-                          <a href=""><span class="crayon">#</span>beginners</a>
-                          <a href=""><span class="crayon">#</span>codenewbie</a>
-                          <a href=""><span class="crayon">#</span>webdev</a>
-                          <a href=""><span class="crayon">#</span>programming</a>
+                      <div class="card-b-content d-flex justify-content-between align-items-center">
+                        <div class="icon-right">
+                          <a href="">
+                            <img src="images/icon_cards/icono_corazon.svg" alt="">
+                            <span>8 reaction</span>
+                          </a>
+                          <a href="">
+                            <img src="images/icon_cards/icon_comment.svg" alt="">
+                            <span>Add comment</span>
+                          </a>
                         </div>
 
-                        <div class="card-b-content d-flex justify-content-between align-items-center">
-                          <div class="icon-right">
-                            <a href="">
-                              <img src="images/icon_cards/icono_corazon.svg" alt="">
-                              <span>8 reaction</span>
-                            </a>
-                            <a href="">
-                              <img src="images/icon_cards/icon_comment.svg" alt="">
-                              <span>Add comment</span>
-                            </a>
-                          </div>
-
-                          <div class="icon-left">
-                            <small class="text-muted timer">1 min read</small>
-                            <button type="button" class="btn btn-less-light" onclick="clickSave(this)">
-                              Save
-                            </button>
-                          </div>
+                        <div class="icon-left">
+                          <small class="text-muted timer">1 min read</small>
+                          <button type="button" class="btn btn-less-light" onclick="clickSave(this)">
+                            Save
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
-                </a>
-
+                </div>
 
                 <div class="card">
                   <div class="card-body">
@@ -349,7 +361,7 @@
 
               </div>
 
-              <div class="listener-class tab-pane" id="pills-week" role="tabpanel" aria-labelledby="pills-week-tab">
+              <div class="tab-pane" id="pills-week" role="tabpanel" aria-labelledby="pills-week-tab">
                 <div class="card ">
                   <img class="card-img-top" src="./images/articles/week.png" alt="Card image cap">
                   <div class="card-body">
@@ -432,7 +444,7 @@
 
               </div>
 
-              <div class="listener-class tab-pane" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
+              <div class="tab-pane" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
                 <div class="card ">
                   <img class="card-img-top" src="./images/articles/month.png" alt="Card image cap">
                   <div class="card-body">
@@ -556,7 +568,7 @@
                 </div>
               </div>
 
-              <div class="listener-class tab-pane" id="pills-year" role="tabpanel" aria-labelledby="pills-year-tab">
+              <div class="tab-pane" id="pills-year" role="tabpanel" aria-labelledby="pills-year-tab">
                 <div class="card ">
                   <img class="card-img-top" src="./images/articles/year.jpg" alt="Card image cap">
                   <div class="card-body">
@@ -681,7 +693,7 @@
 
               </div>
 
-              <div class="listener-class tab-pane" id="pills-infinity" role="tabpanel" aria-labelledby="pills-infinity-tab">
+              <div class="tab-pane" id="pills-infinity" role="tabpanel" aria-labelledby="pills-infinity-tab">
                 <div class="card ">
                   <img class="card-img-top" src="./images/articles/infinity.jpeg" alt="Card image cap">
                   <div class="card-body">
@@ -765,7 +777,7 @@
 
               </div>
 
-              <div class="listener-class tab-pane" id="pills-latest" role="tabpanel" aria-labelledby="pills-latest-tab">
+              <div class="tab-pane" id="pills-latest" role="tabpanel" aria-labelledby="pills-latest-tab">
                 <div class="card ">
                   <img class="card-img-top" src="./images/articles/latest.jpg" alt="Card image cap">
                   <div class="card-body">
@@ -894,77 +906,35 @@
             <!-- Aside Derecho -->
             <div class="card mt-5 first-section rounded mb-3" style="width: 18rem;">
               <ul class="list-group list-group-news rounded">
-                <h4 class="p-3"><strong> #news</strong></h4>
-                <a href="#" class="listings1 p-3 border-top">PE offers limited scholarships from 1k to 4k for diversity
-                  and financial hardship<span>education</span><br>
-                  <p class="comments mt-2"> 36 comments</p>
-                </a>
-                <a href="#" class="listings1 p-3 border-top">Learn more than just ´coding´ Learn the entire design
-                  process:<span>education</span><br>
-                  <p class="comments mt-2"> 15 comments</p>
-                </a>
-                <a href="#" class="listings1 p-3 border-top">FCAL - Open source cross plaform calculator for
-                  programmers<span>collabs</span><br>
-                  <p class="comments mt-2"> 12 comments</p>
-                </a>
-                <a href="#" class="listings1 p-3 border-top">QA Platform Engineer<span>jobs</span><br>
-                  <p class="comments mt-2"> 10 comments</p>
-                </a>
-                <a href="#" class="listings1 p-3 border-top">💡Free Clear Explanations of Fundamental Concepts in
-                  Software - in plain english with hand-drawn illustrations<span>education</span><br>
-                  <p class="comments mt-2">6 comments</p>
-                </a>
+                  <h4 class="p-3"><strong> #news</strong></h4>
+                  <a href="#" class="listings1 p-3 border-top">PE offers limited scholarships from 1k to 4k for diversity and financial hardship<span>education</span><br><p class="comments mt-2"> 36 comments</p></a>
+                  <a href="#" class="listings1 p-3 border-top">Learn more than just ´coding´ Learn the entire design process:<span>education</span><br><p class="comments mt-2"> 15 comments</p></a>
+                  <a href="#" class="listings1 p-3 border-top">FCAL - Open source cross plaform calculator for programmers<span>collabs</span><br><p class="comments mt-2"> 12 comments</p></a>
+                  <a href="#" class="listings1 p-3 border-top">QA Platform Engineer<span>jobs</span><br><p class="comments mt-2"> 10 comments</p></a>
+                  <a href="#" class="listings1 p-3 border-top">💡Free Clear Explanations of Fundamental Concepts in Software - in plain english with hand-drawn illustrations<span>education</span><br><p class="comments mt-2">6 comments</p></a>
               </ul>
-            </div>
-            <div class="card mt-5 first-section rounded mb-3" style="width: 18rem;">
+          </div>
+          <div class="card mt-5 first-section rounded mb-3" style="width: 18rem;">
               <ul class="list-group list-group-news rounded">
-                <h4 class="p-3"><strong> #news</strong></h4>
-                <a href="#" class="listings1 p-3 border-top">PE offers limited scholarships from 1k to 4k for diversity
-                  and financial hardship<span>education</span><br>
-                  <p class="comments mt-2"> 36 comments</p>
-                </a>
-                <a href="#" class="listings1 p-3 border-top">Learn more than just ´coding´ Learn the entire design
-                  process:<span>education</span><br>
-                  <p class="comments mt-2"> 15 comments</p>
-                </a>
-                <a href="#" class="listings1 p-3 border-top">FCAL - Open source cross plaform calculator for
-                  programmers<span>collabs</span><br>
-                  <p class="comments mt-2"> 12 comments</p>
-                </a>
-                <a href="#" class="listings1 p-3 border-top">QA Platform Engineer<span>jobs</span><br>
-                  <p class="comments mt-2"> 10 comments</p>
-                </a>
-                <a href="#" class="listings1 p-3 border-top">💡Free Clear Explanations of Fundamental Concepts in
-                  Software - in plain english with hand-drawn illustrations<span>education</span><br>
-                  <p class="comments mt-2">6 comments</p>
-                </a>
+                  <h4 class="p-3"><strong> #news</strong></h4>
+                  <a href="#" class="listings1 p-3 border-top">PE offers limited scholarships from 1k to 4k for diversity and financial hardship<span>education</span><br><p class="comments mt-2"> 36 comments</p></a>
+                  <a href="#" class="listings1 p-3 border-top">Learn more than just ´coding´ Learn the entire design process:<span>education</span><br><p class="comments mt-2"> 15 comments</p></a>
+                  <a href="#" class="listings1 p-3 border-top">FCAL - Open source cross plaform calculator for programmers<span>collabs</span><br><p class="comments mt-2"> 12 comments</p></a>
+                  <a href="#" class="listings1 p-3 border-top">QA Platform Engineer<span>jobs</span><br><p class="comments mt-2"> 10 comments</p></a>
+                  <a href="#" class="listings1 p-3 border-top">💡Free Clear Explanations of Fundamental Concepts in Software - in plain english with hand-drawn illustrations<span>education</span><br><p class="comments mt-2">6 comments</p></a>
               </ul>
-            </div>
-            <div class="card mt-5 first-section rounded mb-3" style="width: 18rem;">
+          </div>
+          <div class="card mt-5 first-section rounded mb-3" style="width: 18rem;">
               <ul class="list-group list-group-news rounded">
-                <h4 class="p-3"><strong> #news</strong></h4>
-                <a href="#" class="listings1 p-3 border-top">PE offers limited scholarships from 1k to 4k for diversity
-                  and financial hardship<span>education</span><br>
-                  <p class="comments mt-2"> 36 comments</p>
-                </a>
-                <a href="#" class="listings1 p-3 border-top">Learn more than just ´coding´ Learn the entire design
-                  process:<span>education</span><br>
-                  <p class="comments mt-2"> 15 comments</p>
-                </a>
-                <a href="#" class="listings1 p-3 border-top">FCAL - Open source cross plaform calculator for
-                  programmers<span>collabs</span><br>
-                  <p class="comments mt-2"> 12 comments</p>
-                </a>
-                <a href="#" class="listings1 p-3 border-top">QA Platform Engineer<span>jobs</span><br>
-                  <p class="comments mt-2"> 10 comments</p>
-                </a>
-                <a href="#" class="listings1 p-3 border-top">💡Free Clear Explanations of Fundamental Concepts in
-                  Software - in plain english with hand-drawn illustrations<span>education</span><br>
-                  <p class="comments mt-2">6 comments</p>
-                </a>
+                  <h4 class="p-3"><strong> #news</strong></h4>
+                  <a href="#" class="listings1 p-3 border-top">PE offers limited scholarships from 1k to 4k for diversity and financial hardship<span>education</span><br><p class="comments mt-2"> 36 comments</p></a>
+                  <a href="#" class="listings1 p-3 border-top">Learn more than just ´coding´ Learn the entire design process:<span>education</span><br><p class="comments mt-2"> 15 comments</p></a>
+                  <a href="#" class="listings1 p-3 border-top">FCAL - Open source cross plaform calculator for programmers<span>collabs</span><br><p class="comments mt-2"> 12 comments</p></a>
+                  <a href="#" class="listings1 p-3 border-top">QA Platform Engineer<span>jobs</span><br><p class="comments mt-2"> 10 comments</p></a>
+                  <a href="#" class="listings1 p-3 border-top">💡Free Clear Explanations of Fundamental Concepts in Software - in plain english with hand-drawn illustrations<span>education</span><br><p class="comments mt-2">6 comments</p></a>
               </ul>
-            </div>
-
+          </div>
+            
 
 
           </div>
@@ -1012,8 +982,13 @@
 
         <div class="d-flex flex-column">
           <a class="a-f" href="https://kodemia.mx/" target="_blank">Terms of use</a>
+<<<<<<< HEAD
           <a class="a-f" href="https://kodemia.mx/" target="_blank">Contac</a>
           <a class="a-f" href="/write-post.html" target="_blank"> <b>Write a post</b></a>
+=======
+          <a class="a-f" href="https://kodemia.mx/" target="_blank">Contact</a>
+          <a class="a-f" href="https://kodemia.mx/" target="_blank"> <b>Write a post</b></a>
+>>>>>>> master
         </div>
       </div>
       <img class="d-none d-lg-block perezoso" src="images/changuito.png" alt="">
