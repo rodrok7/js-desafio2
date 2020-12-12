@@ -82,6 +82,11 @@
   z-index: 1;
 }
 
+.button-more {
+  color: grey;
+  border: none;
+}
+
 #aside-izquierdo .profile {
   height: 60px;
   border-radius: 50%;
