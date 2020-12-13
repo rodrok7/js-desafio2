@@ -27,12 +27,11 @@ $( window ).on( "load", function() {
                 console.log(event.key)
                 let {title} = cardsCollection[key]
                 let character = event.target.value.toLowerCase();
-                character = character.slice(0, -1);
                 let find = title.toLowerCase().includes(character);
                 find ? filterObjects[key] = cardsCollection[key] : null
             }
         }
             //printCards("", filterObjects)
-        (event.key.match(/[a-z]/gmi) || event.shiftKey || event.keyCode === 8 || event.keyCode === 32) ? printCards("", filterObjects) : console.log("esta no es la tecla")
+        (event.key.match(/^[a-z]$/gmi) || event.shiftKey || event.keyCode === 8 || event.keyCode === 32 || event.keyCode === 13) ? printCards("", filterObjects) : console.log("esta no es la tecla")
     })
 })
