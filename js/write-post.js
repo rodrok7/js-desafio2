@@ -103,13 +103,9 @@ $(document).on("click", ".save-key", event => {
     console.log(event.target)
     let id = $(event.target).data("key");
     let savedValue = $(event.target).data("savedpost");
-    console.log(id);
-    console.log(savedValue);
     saveReadingList(id, savedValue)
     $(event.target).data("savedpost", !savedValue);
-    console.log(savedValue);
     $(event.target).text(savedValue ? "Save" : "Saved")
-    console.log($(event.target).text())
 })
 
 const saveReadingList = (id, savedValue) => {
@@ -133,9 +129,7 @@ const savePost = newPost => {
         method: "POST",
         data: JSON.stringify(newPost),
         success: response => {
-           
-
-            
+             
         },
         error: error => {
             console.log( error )
@@ -153,7 +147,7 @@ $("#pills-week-tab").click(() => {
     let todaysDate = moment()
     for (key in cardsCollection) {
         let cardDate = moment(cardsCollection[key].date, "YYYYMMDD HH:mm:ss")
-        if (todaysDate.diff(cardDate, "weeks") > 1) {
+        if (todaysDate.diff(cardDate, "weeks") <= 1) {
             filteredPosts[key]= cardsCollection[key]
         }
     }
@@ -166,7 +160,7 @@ $("#pills-month-tab").click(() => {
     let todaysDate = moment()
     for (key in cardsCollection) {
         let cardDate = moment(cardsCollection[key].date, "YYYYMMDD HH:mm:ss")
-        if (todaysDate.diff(cardDate, "months") > 1) {
+        if (todaysDate.diff(cardDate, "months") <= 1) {
             filteredPosts[key]= cardsCollection[key]
         }
     }
@@ -179,7 +173,7 @@ $("#pills-year-tab").click(() => {
     let todaysDate = moment()
     for (key in cardsCollection) {
         let cardDate = moment(cardsCollection[key].date, "YYYYMMDD HH:mm:ss")
-        if (todaysDate.diff(cardDate, "years") > 1) {
+        if (todaysDate.diff(cardDate, "years") <= 1) {
             filteredPosts[key]= cardsCollection[key]
         }
     }
