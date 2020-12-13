@@ -2,22 +2,8 @@ let params = new URLSearchParams(document.location.search.substring(1));
 let idPost = params.get("postid");
 console.log(idPost);
 
-const saveToReadingList = id => {
-    /*$.ajax({
-                url: `https://cards-6f1a0-default-rtdb.firebaseio.com/${id}.json`,
-                method: "PATCH",
-                data:JSON.stringify({"savedPost": true}),
-                success: (response) => {
-                  console.log(response);
-                 
-                },
-                error: (error) => {
-                  console.log(error);
-                }
-    });*/
-};
-//saveToReadingList(idPost);
 
+//saveToReadingList(idPost);
 const getCards = () =>{
     $.ajax({
         url: "https://cards-6f1a0-default-rtdb.firebaseio.com/.json",
@@ -40,19 +26,19 @@ const printSaved = (cardsToPrint) => {
     console.log(savedPost);
     if(!savedPost) continue;
     let entryCard = `
-      <div class="saved-card m-4 p-2">
-        <div class="mb-2 d-inline-block">
+      <div class="saved-card mb-3 d-flex">
+        <div class="pt-2 d-inline-block">
           <img class="profile_min" src="images/aside1/prision-mike.png" alt="">
         </div>
 
-        <div class="d-inline-block">
+        <div class="ml-2 d-inline-block">
           <h1 class="card-title p-0 m-0">
             <a href="./post.html?postid=${key}">${title}</a>
           </h1>
 
-          <span class="card-text name">
+          <small class="card-text name">
               <a class="">${name} ${lastName}</a>
-          </span>
+          </small>
           <span class="card-text date">
             <a class="">${moment(
                 date,
@@ -67,7 +53,8 @@ const printSaved = (cardsToPrint) => {
           </span>
         </div>
       </div>
-     <p>&nbsp;</p> `
+     <p>&nbsp;</p> 
+     </div>`
     $('#savedCards').prepend(entryCard);
   }
 }

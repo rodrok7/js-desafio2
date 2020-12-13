@@ -30,6 +30,18 @@
   color: white;
 }
 
+.btn .save-key {
+  color: black;
+}
+
+.btn .save-key:active {
+  color: black;
+}
+
+.btn .save-key:visited {
+  color: black;
+}
+
 .dropbtn {
   height: 30px;
   color: white;
@@ -738,6 +750,7 @@ select {
 .tab-content .tab-pane .card .card-body .card-b-content .icon-left .btn-less-light {
   background-color: #d2d6db;
   padding: 6px 14px;
+  color: #222222;
 }
 
 .tab-content .tab-pane .card .card-body .card-b-content .icon-left .btn-less-light:hover {
@@ -747,6 +760,37 @@ select {
 .tab-content .tab-pane .card .card-body .card-b-content .icon-left .btn-less-light:focus {
   background-color: transparent;
   border: none;
+}
+
+.tab-content .tab-pane .card .card-body .card-b-content .icon-left .btn-less-light:active {
+  color: #222222;
+}
+
+.tab-content .tab-pane .card .card-body .card-b-content .icon-left .btn-less-light:visited {
+  color: #222222;
+}
+
+.btn-less-light {
+  background-color: #d2d6db;
+  padding: 6px 14px;
+  color: #222222;
+}
+
+.btn-less-light:hover {
+  background-color: #323EBE;
+}
+
+.btn-less-light:focus {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-less-light:active {
+  color: #222222;
+}
+
+.btn-less-light:visited {
+  color: #222222;
 }
 
 /*Comienza el CSS del Post*/
@@ -1012,20 +1056,33 @@ body {
   transition: 0.5s;
 }
 
-.saved-card {
-  height: 40px;
+#savedCards {
+  background: #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 0 1px rgba(8, 9, 10, 0.1);
+          box-shadow: 0 0 0 1px rgba(8, 9, 10, 0.1);
 }
 
-.saved-card div {
-  height: 40px;
+.saved-card h1 {
+  line-height: 18px;
+}
+
+.saved-card h1 a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.saved-card .name a {
+  font-weight: bold;
 }
 
 .saved-card a {
   color: #000000;
+  font-size: 14px;
 }
 
 .saved-card img {
-  height: 40px;
+  height: 30px;
   border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */

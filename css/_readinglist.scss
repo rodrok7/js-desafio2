@@ -1,16 +1,31 @@
+#savedCards {
+  background: $white;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px $box-shadow;
+}
+
 .saved-card {
-    height: 40px;
-    
-    div {
-      height: 40px;
-    }
-  
+  h1 {
+    line-height: 18px;
     a {
-      color: #000000;
-    }
-  
-    img {
-      height: 40px;
-      border-radius: 50%;
+      font-size: 18px;
+      font-weight: bold;      
     }
   }
+
+  .name {
+    a {
+      font-weight: bold;
+    }
+  }
+
+  a {
+    color: #000000;
+    font-size: 14px;
+  }
+
+  img {
+    height: 30px;
+    border-radius: 50%;
+  }
+}
