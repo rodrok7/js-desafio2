@@ -202,14 +202,26 @@ $("#pills-infinity-tab").click(() => {
 
 $("#pills-latest-tab").click(() => {
     let filteredPosts = {}
+    let currentPosts = {}
+    let contador = 0;
     let todaysDate = moment()
     for (key in cardsCollection) {
         let cardDate = moment(cardsCollection[key].date, "YYYY-MM-DD HH:mm:ss")
-        if (todaysDate.diff(cardDate, "hours") <= 3) {
+        if (todaysDate.diff(cardDate, "days") >= 0) {
             filteredPosts[key]= cardsCollection[key]
         }
     }
     filteredPosts = sortPosts(filteredPosts);
-    printCards("latest",filteredPosts)
+    console.log(Object.keys(filteredPosts))
+    console.log(Object.values(filteredPosts))
+   
+        for(key in filteredPosts){
+            if(contador < 10){
+            currentPosts[key] = filteredPosts[key]
+            }
+            contador++
+        }
+
+    printCards("latest",currentPosts)
 })
 
