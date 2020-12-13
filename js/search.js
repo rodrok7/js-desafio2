@@ -31,7 +31,10 @@ $( window ).on( "load", function() {
                 find ? filterObjects[key] = cardsCollection[key] : null
             }
         }
-            //printCards("", filterObjects)
+        //Si se cumplieron con las condiciones de ser letras, cuando se pone mayúsculas
+        //event.keyCode === 8 tecla borrar en unicode
+        // event.keyCode === 32 tecla espace
+        //event.keyCode === 13 tecla enter para que funcione si copiamos y pegamos
         (event.key.match(/^[a-z]$/gmi) || event.shiftKey || event.keyCode === 8 || event.keyCode === 32 || event.keyCode === 13) ? printCards("", filterObjects) : console.log("esta no es la tecla")
     })
 })
