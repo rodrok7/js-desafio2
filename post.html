@@ -13,7 +13,7 @@
           <!-- Este es el elemento fixed (header) -->
   <nav class="navbar fixed-top navbar-light bg-light shadow-sm p-1 mb-5 bg-white rounded">
     <div class="container nav-top">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <i class="pl-1 fab fa-dev" title="dev"></i>
       </a>
       <form class="form-inline flex-grow-1 mr-1 mr-lg-5">
@@ -84,120 +84,39 @@
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade active show" id="pills-feed" role="tabpanel" aria-labelledby="pills-feed-tab">
                                 <div class="card">
-                                    <img class="card-img-top" src="./images/articles/post.jpg" alt="Card image cap" id="myTopImg">
+                                    <img class="card-img-top" src="" alt="Card image cap" id="myTopImg">
                                     <div class="card-body">
                                         <div class="content-center">
-                                            <h1 class="card-title mt-3" id="mytitlePage">Functions, Parameters and Return Values</h1>
-                                            <div class="hashtags" id="misHashTags">
-                                                <a href=""><span class="crayon">#</span>beginners</a>
-                                                <a href=""><span class="crayon">#</span>codenewbie</a>
-                                                <a href=""><span class="crayon">#</span>webdev</a>
-                                                <a href=""><span class="crayon">#</span>programming </a>  
+                                            <h1 class="card-title mt-3" id="mytitlePage"></h1>
+                                            <div class="hashtags mb-3" id="misHashTags">
                                             </div> 
-                                            <span class=""><img class="profile_min" src="images/profile/p6.jpg" alt=""></span>
+                                            <span class=""><img class="profile_min" src="images/aside1/prision-mike.png" alt=""></span>
                                             <div class="info_personal d-inline ">
-                                                <span class="card-text name"><a class="" id="nombreDeUsuario">Teresa Holfeld</a></span>
-                                                <span class="card-text date"><a class="" id="fechaDelPost">Nov 2 (6 days ago)</a></span> 
+                                                <span class="card-text name"><a class="" id="nombreDeUsuario"></a></span>
+                                                <span class="card-text date"><a class="" id="fechaDelPost"></a></span> 
                                             </div> 
-                                            <div class="content-post">
-                                                <p id="myText">Yo tengo que cambiar</p>
-                                                <h2 class="card-title mt-3">What is CSS Flexbox?</h2>
-                                                <p>
-                                                    Flexbox is a web layout model that allows you to create a responsive 
-                                                    user interface, meaning that it can adapt to different screen sizes. 
-                                                    It uses rows and columns to structure elements. </p>
-                                                <p> If you're creating a navbar from scratch, CSS flexbox can be a good option to try out. </p>
-                                                <h2>HTML</h2>
-                                                <div class="code">
 
+                                            <div class="content-post mt-2 pt-2">
+                                                <p id="myText"></p>
+
+                                                <div class="d-flex justify-content-between comment-section">
+                                                    <span><h1>Discussion</h1></span>
+                                                    <span class="pt-2"><button type="button" class="btn">Subscribe</button></span>
                                                 </div>
-                                                <p>Here, our HTML code here uses an unordered list &lt;ul&gt; to list out our nav items. You can see that there's not much to our navbar just yet.</p>
-                                                <div class="prueba_code">
-                                                            <!-- Navbar -->
-                                                            <header>
-                                                                <h1 id="nav-title">DEV.TO</h1>
-                                                                <nav>
-                                                                    <ul>
-                                                                        <li><a href="#">About</a></li>
-                                                                        <li><a href="#">Services</a></li>
-                                                                        <li><a href="#">Contact</a></li>
-                                                                    </ul>
-                                                                </nav>
-                                                            </header>
+
+                                                <div class="form-group shadow-textarea mt-4">
+                                                    <label for="exampleFormControlTextarea6">Add to the discussion</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
+                                                    <div class="mt-4">
+                                                        <button type="button" class="btn">Submit</button>
+                                                        <button type="button" class="btn">Preview</button>
                                                     </div>
-                                                    <p>With CSS flexbox, we can format and make this much more appealing! </p>
-                                                    <p data-height="265" data-theme-id="0" data-slug-hash="vGNKNj" data-default-tab="css,result" data-user="blonfu" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/blonfu/pen/vGNKNj/">Modificar color de texto según fondo (stylus)</a> by blonfu (<a href="http://codepen.io/blonfu">@blonfu</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-                                                    <div class="codePen">
-                                                        <!-- <script async src="//assets.codepen.io/assets/embed/ei.js"></script> -->
-                                                    </div>
-                                                    <p>
-                                                        If you want to dive deeper into flexbox and see what it can do, here's a great resource! 
-                                                        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a> 
-                                                    </p>
-                                                    <div class="d-flex justify-content-between comment-section">
-                                                        <h1>Discussion</h1>
-                                                        <button type="button" class="btn btn-light">Subscribe</button>
-                                                    </div>
-                                                    <div class="form-group shadow-textarea">
-                                                        <label for="exampleFormControlTextarea6">Add to the discussion</label>
-                                                        <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
-                                                        <div class="">
-                                                            <button type="button" class="btn btn-primary">Submit</button>
-                                                            <button type="button" class="btn btn-secondary">Preview</button>
-                                                        </div>
-                                                    </div>
-                                                    <p>
-                                                        <a class="btn btn-primary display-button" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                            <img src="images/icon_nav/stackexchange-arrow-down.svg" alt="">
-                                                        </a>
-                                                    </p>
-                                                      <div class="collapse show" id="collapseExample">
-                                                        <div class="card card-body">
-                                                            
-                                                            <div class="info_personal d-inline d-flex justify-content-between align-items-center">
-                                                                <div class="d-inline d-flex justify-content-around align-items-center w-25">
-                                                                    <span class=""><img class="profile_min" src="images/profile/p6.jpg" alt=""></span>
-                                                                    <span class="card-text d-block name"><a class="">Teresa</a></span>
-                                                                    <span class="git_icon"><img class="profile_min" src="images/icon_nav/logo_github.svg" alt=""></span>
-                                                                </div>
-                                                                <div class=" d-flex justify-content-between">
-                                                                    <span class="card-text d-block date"><a class="">Nov 2 (6 days ago)</a></span> 
-                                                                    <div class="dropdown">
-                                                                        <button class="btn dropdown-toggle mini_button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                         <img src="images/icon_nav/icon-hamburger.svg" alt="">
-                                                                        </button>
-                                                                        <div class="dropdown-menu drop_square" aria-labelledby="dropdownMenuButton">
-                                                                          <a class="dropdown-item" href="#">Permalink</a>
-                                                                          <a class="dropdown-item" href="#">Report Abuse</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div> 
-                                                          <p>
-                                                            Since the header only has two direct child elements and you want one of them to go to the left edge and the other one to the 
-                                                            right edge (and since this is a flexbox article), wouldn't it make more sense to just add
-                                                            justify-content: space-between.
-                                                          </p>
-                                                          <p>
-                                                            Instead of playing with the margin?
-                                                          </p>
-                                                        </div>
-                                                        <p>
-                                                    
-                                                        </p>
-                                                        <div class="collapse show" id="collapseExample">
-                                                            <div class="card card-body">
-                                                              <p>
-                                                                You're right! That's probably simpler.
-                                                              </p>
-                                                             
-                                                            </div>
-                                                          </div>
-                                                      </div>
+                                                </div>
                                              </div> 
                                         </div>        
                                     </div>
                                 </div>
+
                                 <div class="card add_articles">
                                     <div class="card-body">
                                                 <h1>Read Next</h1>
