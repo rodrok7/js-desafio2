@@ -219,17 +219,17 @@
                   alt=""></a>
             </header>
 
-            <header class="d-flex d-md-none align-items-center justify-content-center mobile">
+            <header class="d-flex d-md-none align-items-center mb-2 justify-content-center mobile">
               <a href="#" onclick="on()"><img src="images/icon_nav/icon_first_aside.svg" alt=""></a>
               <div class="col-8 d-flex flex-nowrap justify-content-between align-items-center">
                 <h5 class="post-title">Posts</h5>
                 <select class="" name="Feed" id="feed-filter-select">
-                  <option value="feed">Feed</option>
-                  <option value="week">Week</option>
-                  <option value="month">Month</option>
-                  <option value="year">Year</option>
-                  <option value="infinity">Infinity</option>
-                  <option value="latest">Latest</option>
+                  <option data-container="feed" data-option="" value="">Feed</option>
+                  <option data-container="week" data-option="weeks" value="week">Week</option>
+                  <option data-container="month" data-option="months" value="month">Month</option>
+                  <option data-container="year" data-option="years" value="year">Year</option>
+                  <option data-container="infinity" data-option="" value="infinity">Infinity</option>
+                  <option data-container="latest" data-option="hours" value="latest">Latest</option>
                 </select>
               </div>
               <a href="#" class="rayo" onclick="on()"><img src="images/icon_nav/rayo_nav.svg" alt=""></a>

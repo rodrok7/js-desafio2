@@ -227,17 +227,4 @@ $("#pills-latest-tab").click(() => {
     printCards("latest", newLatestCards )
 })
 
-// const getLatestPosts = filteredPosts => {
-//     let currentPosts = {}
-//     let contador = Object.keys(filteredPosts).length;
-//     for(key in filteredPosts){
-//         if(contador > 10){    
-//             delete filteredPosts[key];
-//             contador--;
-//             continue;
-//         }
-//         currentPosts[key] = filteredPosts[key];
-//     }
-//     return currentPosts;
-// }
 
