@@ -106,9 +106,9 @@
 }
 
 .aside-izquierdo .my-tags-list {
-  height: 270px;
-  overflow: scroll;
-  width: 240px;
+  height: 100px;
+  overflow: visible;
+  width: 150px;
   overflow-x: hidden;
 }
 
@@ -239,9 +239,9 @@
 }
 
 .aside-izquierdo .my-tags-list {
-  height: 270px;
-  overflow: scroll;
-  width: 240px;
+  height: 100px;
+  overflow: visible;
+  width: 150px;
   overflow-x: hidden;
 }
 
