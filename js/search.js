@@ -5,6 +5,8 @@ $(window).on("load", function () {// utilizamos $(window).on("load"... para que 
     const searcher = (selector) => {
         $(selector).keyup(event => {
             $("#pills-feed-tab").trigger("click");
+            $(".tab-pane").hide();
+            $("#pills-feed").show();
             let result = searchPost(event)
             //Si se cumplieron con las condiciones de ser letras, cuando se pone mayúsculas
             //event.keyCode === 8 tecla borrar en unicode
@@ -16,7 +18,7 @@ $(window).on("load", function () {// utilizamos $(window).on("load"... para que 
     }
     const searchPost = event =>{
         let filterObjects = {};
-           
+           //Añadir puntos comas y dos puntos
             if (event.shiftKey ||event.target.value.match(/[a-z]/gim) || event.keyCode === 32 || event.keyCode === 13) {
                 // Los datos a iterar son JSON, no arrays
                 for (key in cardsCollection) {
