@@ -13,9 +13,59 @@
 </head>
 
 <body>
+  <!-- Este es el modal del boton rayo -->
+<!-- Modal -->
+<div class="modal fade" id="rayoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card first-section rounded mb-3">
+          <ul class="list-group list-group-news rounded">
+              <h4 class="p-3"><strong> #news</strong></h4>
+              <a href="#" class="listings1 p-3 border-top">PE offers limited scholarships from 1k to 4k for diversity and financial hardship<span>education</span><br><p class="comments mt-2"> 36 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">Learn more than just ´coding´ Learn the entire design process:<span>education</span><br><p class="comments mt-2"> 15 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">FCAL - Open source cross plaform calculator for programmers<span>collabs</span><br><p class="comments mt-2"> 12 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">QA Platform Engineer<span>jobs</span><br><p class="comments mt-2"> 10 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">💡Free Clear Explanations of Fundamental Concepts in Software - in plain english with hand-drawn illustrations<span>education</span><br><p class="comments mt-2">6 comments</p></a>
+          </ul>
+      </div>
+      <div class="card mt-5 first-section rounded mb-3">
+          <ul class="list-group list-group-news rounded">
+              <h4 class="p-3"><strong> #news</strong></h4>
+              <a href="#" class="listings1 p-3 border-top">PE offers limited scholarships from 1k to 4k for diversity and financial hardship<span>education</span><br><p class="comments mt-2"> 36 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">Learn more than just ´coding´ Learn the entire design process:<span>education</span><br><p class="comments mt-2"> 15 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">FCAL - Open source cross plaform calculator for programmers<span>collabs</span><br><p class="comments mt-2"> 12 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">QA Platform Engineer<span>jobs</span><br><p class="comments mt-2"> 10 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">💡Free Clear Explanations of Fundamental Concepts in Software - in plain english with hand-drawn illustrations<span>education</span><br><p class="comments mt-2">6 comments</p></a>
+          </ul>
+      </div>
+      <div class="card mt-5 first-section rounded mb-3">
+          <ul class="list-group list-group-news rounded">
+              <h4 class="p-3"><strong> #news</strong></h4>
+              <a href="#" class="listings1 p-3 border-top">PE offers limited scholarships from 1k to 4k for diversity and financial hardship<span>education</span><br><p class="comments mt-2"> 36 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">Learn more than just ´coding´ Learn the entire design process:<span>education</span><br><p class="comments mt-2"> 15 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">FCAL - Open source cross plaform calculator for programmers<span>collabs</span><br><p class="comments mt-2"> 12 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">QA Platform Engineer<span>jobs</span><br><p class="comments mt-2"> 10 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">💡Free Clear Explanations of Fundamental Concepts in Software - in plain english with hand-drawn illustrations<span>education</span><br><p class="comments mt-2">6 comments</p></a>
+          </ul>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Aqu'i termina el modal del boton rayo -->
 
   <!-- Este es el elemento fixed (header) -->
-  <div class="container-fluid header pl-0 pr-0 pt-0 top-header header-fluid fixed-top mt-0 mb-5">
+  <div class="container-fluid header pl-0 pr-0 pt-0 top-header header-fluid fixed-top mt-0 mb-5 d-sm-none">
     <div class="row">
        <div class="container">
          <header class="d-flex justify-content-between mt-2">
@@ -215,8 +265,10 @@
                     aria-controls="pills-latest" aria-selected="false">Latest</a>
                 </li>
               </ul>
-              <a href="#" class="rayo d-none d-md-flex d-lg-none" onclick="on()"><img src="images/icon_nav/rayo_nav.svg"
-                  alt=""></a>
+              <button type="button" class="rayo d-none d-md-flex d-lg-none border-0" id="rayo-button" data-toggle="modal" data-target="#rayoModal">
+                <img src="images/icon_nav/rayo_nav.svg"
+                  alt="lighting icon">
+              </button>
             </header>
 
             <header class="d-flex d-md-none align-items-center justify-content-center mobile">
@@ -232,7 +284,10 @@
                   <option value="latest">Latest</option>
                 </select>
               </div>
-              <a href="#" class="rayo" onclick="on()"><img src="images/icon_nav/rayo_nav.svg" alt=""></a>
+              <button type="button" class="rayo border-0" id="rayo-button" data-toggle="modal" data-target="#rayoModal">
+                <img src="images/icon_nav/rayo_nav.svg"
+                  alt="lighting icon">
+              </button>
             </header>
 
             <div class="tab-content" id="pills-tabContent">
