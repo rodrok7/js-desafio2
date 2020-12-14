@@ -1,6 +1,35 @@
   .aside-derecho{
+      .first-div-container {
+          text-decoration: none;
+          background-color: #f9fafa;
+          .myAnchorsDiv {
+              transition: 0.5s;
+              &:hover {
+                  background-color: lightgrey;
+              }
+              .myAnchors {
+                  text-decoration: none;
+                  color: black;
+              }
+          }
+          .stories {
+              font-size: medium;
+          }
+          .myAsideButtons {
+            .seePostButton {
+                background-color: darkgray;
+                border: solid 1px gray;
+                transition: 0.5s;
+                &:hover{
+                    background-color: hotpink;
+                }
+            }
+
+          }
+      }
     .list-group-news{
       background-color: #f9fafa;
+      color: black;
   }
   
   .list-group-news a:hover{
