@@ -1,4 +1,4 @@
-#aside-izquierdo{
+.aside-izquierdo{
 
     .profile{
         height: 60px;
@@ -7,9 +7,9 @@
     }
 
     .my-tags-list{
-        height: 270px;
-        overflow: scroll;
-        width: 240px;
+        height: 100px;
+        overflow: visible;
+        width: 150px;
         overflow-x: hidden;
 
     }
