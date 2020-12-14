@@ -15,41 +15,37 @@
 <body>
 
   <!-- Este es el elemento fixed (header) -->
-  <nav class="navbar fixed-top navbar-light bg-light shadow-sm p-1 mb-5 bg-white rounded">
-    <div class="container nav-top">
-      <a class="navbar-brand" href="index.html">
-        <i class="pl-1 fab fa-dev" title="dev"></i>
-      </a>
-      <form class="form-inline flex-grow-1 mr-1 mr-lg-5">
-        <input type="hidden" name="utf8" id="" placeholder="" autocomplete="" value="✓">
-        <input class="form-control w-100" id="searchReadingList" type="search" placeholder="Search..." aria-label="Search">
-      </form>
-      <a href="write-post.html">
-        <button type="button "
-          class="btn btn-primary shadow-none font-weight-bold mx-2 text-nowrap d-none d-md-block ml-lg-5" id="newPost">
-          Write a post </button>
-      </a>
-
-      <a class="navbar-brand rounded-circle top-icons p-1 d-flex align-items-center" href="#">
-        <img src="images/post-icon.png" class="rounded-circle" alt="Connect" loading="lazy">
-      </a>
-      <a class="navbar-brand rounded-circle top-icons p-1 d-flex align-items-center" href="#">
-        <img src="images/notification-icon.png" class="rounded-circle" alt="Notifications" loading="lazy">
-      </a>
-      <div class="dropdown">
-        <img src="images/perfil-icon.png" alt="" height="30" width="30" class="rounded-circle ml-3">
-        <div class="dropdown-content rounded border border-dark">
-          <a href="#">NajeraDev <br> @najeradev</a>
-          <a href="#">Dashboard</a>
-          <a href="#">Write a Post</a>
-          <a href="#">Reading list</a>
-          <a href="#">Settings</a>
-          <a href="#">Key Links</a>
-          <a href="#">Sign Out</a>
+  <div class="container-fluid header pl-0 pr-0 pt-0 top-header header-fluid fixed-top mt-0 mb-5 d-none d-md-block">
+    <div class="row">
+       <div class="container">
+         <header class="d-flex justify-content-between mt-2">
+             <div class="left">
+                <a href="index.html">
+                  <img src="/images/header/devto.svg" alt="logo" class="logo mt-1">
+                </a>
+                  <input type="text" id="search-posts" placeholder="Search..." class="ml-5 search-bar">
+             </div>
+             <div class="right">
+                <a href="write-post.html"><button class="btn mr-3"><strong> Write a post</strong></button></a> 
+                <a href="#"> <img src="/images/header/connect.svg" alt="connect ml-3"></a>
+                <a href="#"> <img src="/images/header/bell.svg" alt="bell" class="ml-3"></a>
+                <div class="dropdown">
+                  <img src="/images/681433-original.jpeg " alt="" height="30" width="30" class="rounded-circle ml-3">
+                  <div class="dropdown-content rounded border border-dark">
+                      <a href="#">NajeraDev <br> @najeradev</a>
+                      <a href="#">Dashboard</a>
+                      <a href="#">Write a Post</a>
+                      <a href="/readinglist.html">Reading list</a>
+                      <a href="#">Settings</a>
+                      <a href="#">Key Links</a>
+                      <a href="#">Sign Out</a>
+                  </div>                 
+                </div>
+             </div>    
+          </header>
         </div>
       </div>
-    </div>
-  </nav>
+  </div>
 
 
   <!-- AQUI ESTA EL MAIN DE READING LIST-->
