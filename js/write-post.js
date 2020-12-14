@@ -25,7 +25,7 @@ const getCards = () =>{
         success: response => {
             cardsCollection = response; 
 
-            printCards("feed",cardsCollection)  
+            printCards("feed", sortCurrentPosts(cardsCollection))  
         },
         error: error => {
             console.log( error )
@@ -138,11 +138,21 @@ const savePost = newPost => {
 
 const sortPosts = filteredPosts => {
     let orderedPosts = {}
+    //Generamos un array de key y las ordenamos por fechas
     let keysSorted = Object.keys(filteredPosts).sort( (a,b) => moment(filteredPosts[b].date) - moment(filteredPosts[a].date));
+   // iteramos en el array y ocupamos el "key" disponible para rellenar nuevamente el objeto vacío
+   // con los resultados del array de keys ordenadas llenamos el obj vacío y creamos otro ya ordenado
     keysSorted.forEach(key => { orderedPosts[key] = filteredPosts[key] })
+    //Regresamos el objeto para que la función regrese el valor cada que se mande llamar
     return orderedPosts;
 }
-    
+const sortCurrentPosts = filteredPosts =>{
+    let orderedPosts = {}
+    let keySorted = Object.keys(filteredPosts).sort((a,b) => moment(filteredPosts[a].date)-moment(filteredPosts[b].date));
+    keySorted.forEach(key => {orderedPosts[key] = filteredPosts[key]})
+    return orderedPosts;
+}
+
 $("#savePost").click( () =>{
         savePost(newPostObject)
         window.location.href = "index.html";
