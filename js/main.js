@@ -29,4 +29,3 @@ $(window).on("load", function () {
     // Select filters
 
 });
-
