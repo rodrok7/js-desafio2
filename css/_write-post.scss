@@ -4,6 +4,19 @@ body {
     padding-top: 75px;
   }
 
+  .image-add-button{
+      border-radius: 5px;
+      background-color: transparent;
+      color: black;
+      transition: all  ease 0.1s;
+      border: 1px lightgray solid ;
+      &:hover{
+          border: 1px gray solid ;
+          background-color: #eef0f1;
+          
+      }
+  }
+
   .footer-write-post {
       margin-left: 20%;
   }

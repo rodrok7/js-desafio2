@@ -4,6 +4,37 @@
   box-shadow: 0 0 0 1px $box-shadow;
 }
 
+.hashTags{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-radius: 5px;
+  color: #000000;
+  &:hover{
+    background-color: rgba(8, 9, 10, 0.05)
+  }
+}
+
+
+.readingListSearch{
+  border: 1px lightgray  solid;
+  border-radius: 5px;
+  height: 41px;
+  
+}
+
+.view-archive{
+  border-radius: 5px;
+  border: 1px lightgray solid;
+  height: 40px;
+  background-color: transparent;
+  color: #000000;
+  &:hover{
+    background-color: transparent;
+    border: 2px gray solid;
+  }
+}
+
 .saved-card {
   h1 {
     line-height: 18px;
