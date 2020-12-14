@@ -100,19 +100,19 @@
   border: none;
 }
 
-#aside-izquierdo .profile {
+.aside-izquierdo .profile {
   height: 60px;
   border-radius: 50%;
 }
 
-#aside-izquierdo .my-tags-list {
+.aside-izquierdo .my-tags-list {
   height: 270px;
   overflow: scroll;
   width: 240px;
   overflow-x: hidden;
 }
 
-#aside-izquierdo .aside1 a {
+.aside-izquierdo .aside1 a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,44 +128,44 @@
   text-decoration: none;
 }
 
-#aside-izquierdo .merch-text {
+.aside-izquierdo .merch-text {
   color: blue;
 }
 
-#aside-izquierdo li {
+.aside-izquierdo li {
   text-decoration: none;
   color: black;
 }
 
-#aside-izquierdo img:hover {
+.aside-izquierdo img:hover {
   color: blue;
   pointer-events: visible;
 }
 
-#aside-izquierdo .merch {
+.aside-izquierdo .merch {
   max-width: 240px !important;
   border-radius: 15px;
 }
 
-#aside-izquierdo a {
+.aside-izquierdo a {
   color: black;
 }
 
-#aside-izquierdo a:hover {
+.aside-izquierdo a:hover {
   color: black;
   text-decoration: none;
   background-color: #d2d6db;
 }
 
-#aside-izquierdo details a:hover {
+.aside-izquierdo details a:hover {
   background-color: #d2d6db;
 }
 
-#aside-izquierdo .rainbowdev {
+.aside-izquierdo .rainbowdev {
   height: 25px;
 }
 
-#aside-izquierdo .list-aside {
+.aside-izquierdo .list-aside {
   margin-bottom: 2vh;
 }
 
@@ -198,19 +198,19 @@
   color: gray;
 }
 
-#aside-izquierdo .profile {
+.aside-izquierdo .profile {
   height: 60px;
   border-radius: 50%;
 }
 
-#aside-izquierdo .my-tags-list {
+.aside-izquierdo .my-tags-list {
   height: 270px;
   overflow: scroll;
   width: 240px;
   overflow-x: hidden;
 }
 
-#aside-izquierdo .aside1 a {
+.aside-izquierdo .aside1 a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,44 +226,44 @@
   text-decoration: none;
 }
 
-#aside-izquierdo .merch-text {
+.aside-izquierdo .merch-text {
   color: blue;
 }
 
-#aside-izquierdo li {
+.aside-izquierdo li {
   text-decoration: none;
   color: black;
 }
 
-#aside-izquierdo img:hover {
+.aside-izquierdo img:hover {
   color: blue;
   pointer-events: visible;
 }
 
-#aside-izquierdo .merch {
+.aside-izquierdo .merch {
   max-width: 240px !important;
   border-radius: 15px;
 }
 
-#aside-izquierdo a {
+.aside-izquierdo a {
   color: black;
 }
 
-#aside-izquierdo a:hover {
+.aside-izquierdo a:hover {
   color: black;
   text-decoration: none;
   background-color: #d2d6db;
 }
 
-#aside-izquierdo details a:hover {
+.aside-izquierdo details a:hover {
   background-color: #d2d6db;
 }
 
-#aside-izquierdo .rainbowdev {
+.aside-izquierdo .rainbowdev {
   height: 25px;
 }
 
-#aside-izquierdo .list-aside {
+.aside-izquierdo .list-aside {
   margin-bottom: 2vh;
 }
 
