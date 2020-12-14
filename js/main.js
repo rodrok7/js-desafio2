@@ -1,26 +1,32 @@
-function on() {
-    document.getElementById("overlay").style.display = "block";
-}
+$(window).on("load", function () {
 
-function off() {
-    document.getElementById("overlay").style.display = "none";
-}
+      function on() {
+        document.getElementById("overlay").style.display = "block";
+    }
 
-function changeView(value) {
-    window.location.assign(value+'.html');
-}
+    function off() {
+        document.getElementById("overlay").style.display = "none";
+    }
 
-function clickSave(content) {
-  if (content.innerHTML == 'Saved') {
-    content.innerHTML = 'Save';
-  } else {
-    content.innerHTML = 'Saved';
-  }
-}
+    // function changeView(value) {
+    //     window.location.assign(value+'.html');
+    // }
+
+    function clickSave(content) {
+      if (content.innerHTML == 'Saved') {
+        content.innerHTML = 'Save';
+      } else {
+        content.innerHTML = 'Saved';
+      }
+    }
 
 
-$(document).ready(function () {
-  $("#headingOne").click(function () {
-    $("#headingOne").hide();
-  });
+    $("#headingOne").click(function () {
+      $("#headingOne").hide();
+    });
+
+    console.log(cardsCollection)
+    // Select filters
+
 });
+
