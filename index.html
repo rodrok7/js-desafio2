@@ -13,46 +13,196 @@
 </head>
 
 <body>
-
-  <!-- Este es el elemento fixed (header) -->
-  <div class="navbar fixed-top navbar-light bg-light shadow-sm p-1 mb-5 bg-white rounded">
-    <div class="container nav-top">
-      <a class="navbar-brand" href="#">
-        <i class="pl-1 fab fa-dev" title="dev"></i>
-      </a>
-      <form class="form-inline flex-grow-1 mr-1 mr-lg-5">
-        <input type="hidden" name="utf8" id="" placeholder="" autocomplete="" value="✓">
-        <input class="form-control w-100" type="search" placeholder="Search..." aria-label="Search">
-      </form>
-      <a href="write-post.html" class="text-white">
-        <button type="button "
-          class="btn btn-primary shadow-none font-weight-bold mx-2 text-nowrap d-none d-md-block ml-lg-5" id="newPost">
-          Write a post </button>
-      </a>
-
-      <a class="navbar-brand rounded-circle top-icons p-1 d-flex align-items-center" href="#">
-        <img src="images/post-icon.png" class="rounded-circle" alt="Connect" loading="lazy">
-      </a>
-      <a class="navbar-brand rounded-circle top-icons p-1 d-flex align-items-center" href="#">
-        <img src="images/notification-icon.png" class="rounded-circle" alt="Notifications" loading="lazy">
-      </a>
-      <div class="dropdown">
-        <img src="images/perfil-icon.png" alt="" height="30" width="30" class="rounded-circle ml-3">
-        <div class="dropdown-content rounded border border-dark">
-          <a href="#">NajeraDev <br> @najeradev</a>
-          <a href="#">Dashboard</a>
-          <a href="#">Write a Post</a>
-          <a href="#">Reading list</a>
-          <a href="#">Settings</a>
-          <a href="#">Key Links</a>
-          <a href="#">Sign Out</a>
-        </div>
+  <!-- Este es el modal del boton rayo -->
+<!-- Modal -->
+<div class="modal fade" id="rayoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body aside-derecho">
+        <div class="card first-section rounded mb-3">
+          <ul class="list-group list-group-news rounded">
+              <h4 class="p-3"><strong> #news</strong></h4>
+              <a href="#" class="listings1 p-3 border-top">PE offers limited scholarships from 1k to 4k for diversity and financial hardship<span>education</span><br><p class="comments mt-2"> 36 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">Learn more than just ´coding´ Learn the entire design process:<span>education</span><br><p class="comments mt-2"> 15 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">FCAL - Open source cross plaform calculator for programmers<span>collabs</span><br><p class="comments mt-2"> 12 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">QA Platform Engineer<span>jobs</span><br><p class="comments mt-2"> 10 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">💡Free Clear Explanations of Fundamental Concepts in Software - in plain english with hand-drawn illustrations<span>education</span><br><p class="comments mt-2">6 comments</p></a>
+          </ul>
+      </div>
+      <div class="card mt-5 first-section rounded mb-3">
+          <ul class="list-group list-group-news rounded">
+              <h4 class="p-3"><strong> #news</strong></h4>
+              <a href="#" class="listings1 p-3 border-top">PE offers limited scholarships from 1k to 4k for diversity and financial hardship<span>education</span><br><p class="comments mt-2"> 36 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">Learn more than just ´coding´ Learn the entire design process:<span>education</span><br><p class="comments mt-2"> 15 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">FCAL - Open source cross plaform calculator for programmers<span>collabs</span><br><p class="comments mt-2"> 12 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">QA Platform Engineer<span>jobs</span><br><p class="comments mt-2"> 10 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">💡Free Clear Explanations of Fundamental Concepts in Software - in plain english with hand-drawn illustrations<span>education</span><br><p class="comments mt-2">6 comments</p></a>
+          </ul>
+      </div>
+      <div class="card mt-5 first-section rounded mb-3">
+          <ul class="list-group list-group-news rounded">
+              <h4 class="p-3"><strong> #news</strong></h4>
+              <a href="#" class="listings1 p-3 border-top">PE offers limited scholarships from 1k to 4k for diversity and financial hardship<span>education</span><br><p class="comments mt-2"> 36 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">Learn more than just ´coding´ Learn the entire design process:<span>education</span><br><p class="comments mt-2"> 15 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">FCAL - Open source cross plaform calculator for programmers<span>collabs</span><br><p class="comments mt-2"> 12 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">QA Platform Engineer<span>jobs</span><br><p class="comments mt-2"> 10 comments</p></a>
+              <a href="#" class="listings1 p-3 border-top">💡Free Clear Explanations of Fundamental Concepts in Software - in plain english with hand-drawn illustrations<span>education</span><br><p class="comments mt-2">6 comments</p></a>
+          </ul>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
+</div>
+  <!-- Aqu'i termina el modal del boton rayo -->
+ 
+<!-- Aqu'i empieza el Modal del boton moneditas -->
+<div class="modal fade" id="coinsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body aside-izquierdo">
+        <div class="login mb-3 d-flex">
+          <img src="/images/aside1/prision-mike.png " alt="profile" class="profile mr-2">
+          <div class="informacion d-flex flex-column">
+            <h5 class="najeradev">NajeraDev</h5>
+            <p class="arroba">@najeradev</p>
+          </div>
+        </div>
+        <div class="d-flex flex-column icon-list aside-izq">
+          <a href="/readinglist.html" class="list-aside">
+            <span class="">
+              <img src="images/aside1/losbuenos/drawer.svg " alt="">
+            </span>
+            Reading List
 
+          </a>
+          <a href="#" class="list-aside">
+            <span class="">
+              <img src="images/aside1/losbuenos/listing.svg" alt="">
+            </span>
+            Listing
+          </a>
+          <a href="#" class="list-aside">
+            <span class="">
+              <img src="images/aside1/losbuenos/mic.svg" alt="">
+            </span>
+            Potcasts
+          </a>
+          <a href="#" class="list-aside">
+            <span class="">
+              <img src="images/aside1/losbuenos/camera.svg" alt="">
+            </span>
+            Videos
+          </a>
+          <a href="#" class="list-aside">
+            <span class="">
+              <img src="images/aside1/losbuenos/tag.svg" alt="">
+            </span>
+            Tags
+          </a>
+        </div>
+        <div class="d-flex flex-column justify-content-between" id="accordion">
+          <div class="">
+            <div class="" id="headingOne">
+              <h5 class="mb-0 desapear_button">
+                <button class="button-more" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  More...
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="d-flex flex-column icon_collapse">
+                <a href="#" class="list-aside">
+                  <span class="">
+                    <img src="images/aside1/losbuenos/thumb-up.svg" alt="">
+                  </span>
+                  Code of conduct
+                </a>
+                <a href="#" class="list-aside">
+                  <span class="">
+                    <img src="images/aside1/losbuenos/bulb.svg" alt="">
+                  </span>
+                  FAQ
+                </a>
+                <a href="#" class="list-aside">
+                  <span class="">
+                    <img src="images/aside1/losbuenos/shopping.svg" alt="">
+                  </span>
+                  DEV Shop
+                </a>
+                <a href="#" class="list-aside">
+                  <span class="">
+                    <img src="images/aside1/losbuenos/heart.svg" alt="">
+                  </span>
+                  Sponsors
+                </a>
+                <a href="#" class="list-aside">
+                  <span class="">
+                    <img class="rainbowdev" src="images/aside1/losbuenos/rainbowdev.svg" alt="">
+                  </span>
+                  About
+                </a>
+                <a href="#" class="list-aside">
+                  <span class="">
+                    <img src="images/aside1/losbuenos/smart.svg" alt="">
+                  </span>
+                  Privacy Policy
+                </a>
+                <a href="#" class="list-aside">
+                  <span class="">
+                    <img src="images/aside1/losbuenos/look.svg" alt="">
+                  </span>
+                  Terms of use
+                </a>
+                <a href="#" class="list-aside">
+                  <span class="">
+                    <img src="images/aside1/losbuenos/contact.svg" alt="">
+                  </span>
+                  Contact
+                </a>
+                <div class="redes-nav">
+                  <a href=""><img src="/images/aside1/twitter.svg" alt=""></a>
+                  <a href=""><img src="/images/aside1/facebook.svg" alt=""></a>
+                  <a href=""><img src="/images/aside1/github.svg" alt=""></a>
+                  <a href=""><img src="/images/aside1/instagram.svg" alt=""></a>
+                  <a href=""><img src="/images/aside1/twitch.svg" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-tags d-flex justify-content-between mt-5">
+          <h4>My Tags</h4>
+          <a href=""><img src="/images/aside1/losbuenos/cog.svg" alt="cog" class="cog"></a>
+        </div>
+        <div class="my-tags-list d-flex flex-column mt-3 mb-5">
+          <a href="#" class="mt-0 mb-2">#javascript</a>
+          <a href="#" class="mt-0 mb-2">#webdev</a>
+          <a href="#" class="mt-0 mb-2">#beginners</a>
+          <a href="#" class="mt-0 mb-2">#python</a>
+          <a href="#" class="mt-0 mb-2">#css</a>
+          <a href="#" class="mt-0 mb-2">#git</a>
+          <a href="#" class="mt-0 mb-2">#vscode</a>
+          <a href="#" class="mt-0 mb-2">#gamedev</a>
+        </div>
+        <div class="imagen ">
+          <img src="/images/aside1/losbuenos/merch.jpeg" alt="merch" class="mt-3 mb-3 img-fluid">
+          <h4 class="merch-text"> <strong> Do you have your superawesome T-shirt yet?</strong></h4>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Aqui termina el modal del boton moneditas -->
   <!-- Este es el elemento fixed (header) -->
-  <div class="container-fluid header pl-0 pr-0 pt-0 top-header header-fluid fixed-top mt-0 mb-5">
+  <div class="container-fluid header pl-0 pr-0 pt-0 top-header header-fluid fixed-top mt-0 mb-5 d-sm-none">
     <div class="row">
        <div class="container">
          <header class="d-flex justify-content-between mt-2">
@@ -80,7 +230,7 @@
           </header>
         </div>
       </div>
-    </div>
+  </div>
 
 
 
@@ -90,7 +240,7 @@
     <div class="row">
       <div class="container contenedor-hijo">
         <div class="row">
-          <div class="d-none d-md-block col-md-3 col-lg-2" id="aside-izquierdo">
+          <div class="d-none d-md-block col-md-3 col-lg-2 aside-izquierdo" id="">
             <!-- Emma -->
             <div class="login mb-3 d-flex">
               <img src="/images/aside1/prision-mike.png " alt="profile" class="profile mr-2">
@@ -252,24 +402,31 @@
                     aria-controls="pills-latest" aria-selected="false">Latest</a>
                 </li>
               </ul>
-              <a href="#" class="rayo d-none d-md-flex d-lg-none" onclick="on()"><img src="images/icon_nav/rayo_nav.svg"
-                  alt=""></a>
+              <button type="button" class="rayo d-none d-md-flex d-lg-none border-0" id="rayo-button" data-toggle="modal" data-target="#rayoModal">
+                <img src="images/icon_nav/rayo_nav.svg"
+                  alt="lighting icon">
+              </button>
             </header>
 
-            <header class="d-flex d-md-none items-center justify-content-center mobile">
-              <a href="#" onclick="on()"><img src="images/icon_nav/icon_first_aside.svg" alt=""></a>
+            <header class="d-flex d-md-none align-items-center justify-content-center mobile">
+              <button type="button" class="border-0" data-toggle="modal" data-target="#coinsModal">
+                <img src="images/icon_nav/icon_first_aside.svg" alt="coins icon">
+              </button>
               <div class="col-8 d-flex flex-nowrap justify-content-between align-items-center">
                 <h5 class="post-title">Posts</h5>
-                <select class="" name="Feed" id="feed-filter-select" onclick="changeView(this.value)">
+                <select class="" name="Feed" id="feed-filter-select">
                   <option value="feed">Feed</option>
-                  <option value="feed">Week</option>
-                  <option value="feed">Month</option>
-                  <option value="feed">Year</option>
-                  <option value="feed">Infinity</option>
-                  <option value="feed">Latest</option>
+                  <option value="week">Week</option>
+                  <option value="month">Month</option>
+                  <option value="year">Year</option>
+                  <option value="infinity">Infinity</option>
+                  <option value="latest">Latest</option>
                 </select>
               </div>
-              <a href="#" class="rayo" onclick="on()"><img src="images/icon_nav/rayo_nav.svg" alt=""></a>
+              <button type="button" class="rayo border-0" id="rayo-button" data-toggle="modal" data-target="#rayoModal">
+                <img src="images/icon_nav/rayo_nav.svg"
+                  alt="lighting icon">
+              </button>
             </header>
 
             <div class="tab-content" id="pills-tabContent">

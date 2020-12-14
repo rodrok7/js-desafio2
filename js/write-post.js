@@ -146,10 +146,11 @@ const sortPosts = filteredPosts => {
     //Regresamos el objeto para que la función regrese el valor cada que se mande llamar
     return orderedPosts;
 }
-const sortCurrentPosts = filteredPosts =>{
+const sortCurrentPosts = filteredPosts => {
     let orderedPosts = {}
-    let keySorted = Object.keys(filteredPosts).sort((a,b) => moment(filteredPosts[a].date)-moment(filteredPosts[b].date));
-    keySorted.forEach(key => {orderedPosts[key] = filteredPosts[key]})
+    let keySorted = Object.keys(filteredPosts).sort( (a,b) => moment(filteredPosts[a].date) - moment(filteredPosts[b].date));
+    console.log(keySorted)
+    keySorted.forEach(key => { orderedPosts[key] = filteredPosts[key] })
     return orderedPosts;
 }
 
@@ -211,27 +212,32 @@ $("#pills-infinity-tab").click(() => {
 })
 
 $("#pills-latest-tab").click(() => {
-    let filteredPosts = {}
-    let currentPosts = {}
-    let contador = 0;
-    let todaysDate = moment()
-    for (key in cardsCollection) {
-        let cardDate = moment(cardsCollection[key].date, "YYYY-MM-DD HH:mm:ss")
-        if (todaysDate.diff(cardDate, "days") >= 0) {
-            filteredPosts[key]= cardsCollection[key]
-        }
+    let arrayPosts = []
+    let newPosts = cardsCollection;
+    let newLatestCards = {}
+    for(id in newPosts){
+        let newObject = {...newPosts[id]};
+        newObject["id"] = id;
+        arrayPosts.push(newObject)
     }
-    filteredPosts = sortPosts(filteredPosts);
-    console.log(Object.keys(filteredPosts))
-    console.log(Object.values(filteredPosts))
-   
-        for(key in filteredPosts){
-            if(contador < 10){
-            currentPosts[key] = filteredPosts[key]
-            }
-            contador++
-        }
-
-    printCards("latest",currentPosts)
+    currentPosts = arrayPosts.sort((a,b) => moment(b.date).diff(moment(a.date)));
+    let latestPost = currentPosts.filter((item, key) => key < 10? item : null)
+    const reversedPost = latestPost.reverse()
+    reversedPost.forEach((item, key) => newLatestCards[item.id]= item)
+    printCards("latest", newLatestCards )
 })
+
+// const getLatestPosts = filteredPosts => {
+//     let currentPosts = {}
+//     let contador = Object.keys(filteredPosts).length;
+//     for(key in filteredPosts){
+//         if(contador > 10){    
+//             delete filteredPosts[key];
+//             contador--;
+//             continue;
+//         }
+//         currentPosts[key] = filteredPosts[key];
+//     }
+//     return currentPosts;
+// }
 
