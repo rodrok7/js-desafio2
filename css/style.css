@@ -169,8 +169,43 @@
   margin-bottom: 2vh;
 }
 
+.aside-derecho .first-div-container {
+  text-decoration: none;
+  background-color: #f9fafa;
+}
+
+.aside-derecho .first-div-container .myAnchorsDiv {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.aside-derecho .first-div-container .myAnchorsDiv:hover {
+  background-color: lightgrey;
+}
+
+.aside-derecho .first-div-container .myAnchorsDiv .myAnchors {
+  text-decoration: none;
+  color: black;
+}
+
+.aside-derecho .first-div-container .stories {
+  font-size: medium;
+}
+
+.aside-derecho .first-div-container .myAsideButtons .seePostButton {
+  background-color: darkgray;
+  border: solid 1px gray;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.aside-derecho .first-div-container .myAsideButtons .seePostButton:hover {
+  background-color: hotpink;
+}
+
 .aside-derecho .list-group-news {
   background-color: #f9fafa;
+  color: black;
 }
 
 .aside-derecho .list-group-news a:hover {
